@@ -144,8 +144,19 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-button:hover{color:#000!important;background-color:#ccc!important}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
-/* Colors */
-.w3-james,.w3-hover-james:hover{color:#fff!important;background-color:#2b9d6b!important}
+/* Colors   #9D2B5D  */
+.w3-mygreen1,.w3-hover-mygreen1:hover{color:#fff!important;background-color:#2b9d6b!important}
+.w3-mygreen2,.w3-hover-mygreen2:hover{color:#fff!important;background-color:#2b9d6b!important}
+.w3-mygreen3,.w3-hover-mygreen3:hover{color:#fff!important;background-color:#2b9d6b!important}
+.w3-mygreen4,.w3-hover-mygreen4:hover{color:#fff!important;background-color:#2b9d6b!important}
+.w3-myyellow1,.w3-hover-myyellow1:hover{color:#fff!important;background-color:#969d2b!important}
+.w3-myyellow2,.w3-hover-myyellow2:hover{color:#fff!important;background-color:#969d2b!important}
+.w3-myyellow3,.w3-hover-myyellow3:hover{color:#fff!important;background-color:#969d2b!important}
+.w3-myyellow4,.w3-hover-myyellow4:hover{color:#fff!important;background-color:#969d2b!important}
+.w3-myred1,.w3-hover-myred1:hover{color:#fff!important;background-color:#9d2b5d!important}
+.w3-myred2,.w3-hover-myred2:hover{color:#fff!important;background-color:#9d2b5d!important}
+.w3-myred3,.w3-hover-myred3:hover{color:#fff!important;background-color:#9d2b5d!important}
+.w3-myred4,.w3-hover-myred4:hover{color:#fff!important;background-color:#9d2b5d!important}
 .w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
 .w3-aqua,.w3-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
 .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
