@@ -144,7 +144,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-button:hover{color:#000!important;background-color:#ccc!important}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
-/* Colors   #9D2B5D  */
+/* Colors  1D2F98*/
+.w3-myblue1,.w3-hover-myblue1:hover{color:#fff!important;background-color:#1D2F98!important}
 .w3-mygreen1,.w3-hover-mygreen1:hover{color:#fff!important;background-color:#26895E!important}
 .w3-mygreen2,.w3-hover-mygreen2:hover{color:#fff!important;background-color:#207650!important}
 .w3-mygreen3,.w3-hover-mygreen3:hover{color:#fff!important;background-color:#1B6243!important}
