@@ -261,7 +261,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-hover-none:hover{box-shadow:none!important;background-color:transparent!important}
 /* Colors */
 /*my colours  */
-.w3-mygreen,.w3-hover-mygreen:hover{color:#2B9D6B!important;background-color:#000!important}
+.w3-mygreen,.w3-hover-mygreen:hover{color:#fff!important;background-color:#2B9D6B!important}
 
 
 
