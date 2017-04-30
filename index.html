@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title> Two H - Coffee Roasters </title>
+
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./w3lib.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 * {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
@@ -71,30 +79,42 @@ body {font-family: Verdana,sans-serif;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+.w3-tag, .fa {cursor:pointer;}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
 </style>
-</head>
 <body>
 
+<!-- BAR =================================================================================================================-->
+<!-- style="width:30%   " -->
+<div class="w3-top w3-bar w3-mobile w3-sand">
+  <a href="#OB"      class="w3-bar-item w3-button w3-block w3-opacity w3-cell" style="width:25%" >Our Buisness</a>
+  <a href="#coffee"  class="w3-bar-item w3-button w3-block w3-opacity w3-cell" style="width:25%" >Coffee's</a>
+  <a href="#about"   class="w3-bar-item w3-button w3-block w3-opacity w3-cell" style="width:25%" >About</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-block w3-opacity w3-cell" style="width:25%" >Contact</a>
+</div>
+<!-- BAR  =================================================================================================================-->
 
-<h2>TWO H </h2>
-<p><i>Coffee Roasters</i></p>
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+  <div class="w3-panel">
+  <h3>  <b>TWO  H</b> | <i> Coffee Roasters </i> </h3> 
+  </div>
 
+  <!-- Slideshssaow  =================================================================================================================-->
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
   <img src="/Images/3.jpg" style="width:100%">
   <div class="text">In the cup</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
   <img src="/Images/2.jpg" style="width:100%">
   <div class="text">On the shelf</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
   <img src="/Images/1.jpg" style="width:100%">
   <div class="text">At the roastery</div>
 </div>
@@ -108,7 +128,257 @@ body {font-family: Verdana,sans-serif;}
   <span class="dot"></span> 
 </div>
 
+<!--============================================================================================================= O U R   B U S I N E S S -->
+    <div class="w3-center w3-padding-64" id= "OB">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> Our Business  </span>
+    </div>
+
+<div class=" w3-row  w3-padding-64 w3-container">
+    <div class=" w3-cell w3-col l3 m6 w3-black w3-container w3-padding-16"> <!-- panal 1  -->
+    <button class="w3-btn w3-wide" onclick="document.getElementById('id01').style.display='block'"> For Your Shop </button>
+          <div id="id01" class="w3-panel w3-cell w3-display-container" style="display:none">
+            <span onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-display-topright">X</span><br>
+            <p> Quallity, consistant, coffee that your buisness can depend on. </p>
+            
+          </div> 
+    </div> <!-- panal  1 end -->
+
+    <div class=" w3-cell w3-col l3 m6 w3-dark-grey w3-container w3-padding-16"> <!-- panal 2  -->
+              <button class="w3-btn w3-wide" onclick="document.getElementById('id02').style.display='block'"> For Your Home</button>
+          <div id="id02" class="w3-panel  w3-cell w3-display-container" style="display:none">
+            <span onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-display-topright">X</span><br>
+            <p> A special Coffee for your kitchen cupboard. </p>
+            
+          </div> 
+    </div> <!-- panal  2 end -->
+
+    <div class=" w3-cell w3-col l3 m6 w3-grey w3-container w3-padding-16"> <!-- panal 3  -->
+              <button class="w3-btn w3-wide" onclick="document.getElementById('id03').style.display='block'">Unique Project's</button>
+          <div id="id03" class="w3-panel w3-cell w3-display-container" style="display:none">
+            <span onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-display-topright">X</span><br>
+            <p>Working with our customers to make coffees that are bespoke is a really exciting part of our buisness. 
+      Tell us about your projects and lets work together and create something unique</p>
+
+          </div> 
+    </div> <!-- panal  3 end -->
+
+    <div class=" w3-cell w3-col l3 m6 w3-light-grey w3-container w3-padding-16"> <!-- panal 4 -->
+              <button class="w3-btn w3-wide " onclick="document.getElementById('id04').style.display='block'">Promises</button>
+          <div id="id04" class="w3-panel w3-cell w3-display-container" style="display:none">
+            <span onclick="this.parentElement.style.display='none'"
+            class="w3-button w3-display-topright">X</span><br>
+            <p>You have our word that every bag of coffee that leaves our roastery we <b>will</b> be proud of. That means it will be the same as the one that came before it. It will be delicious. And, it will be a of a fair & reasonable price</p>
+
+          </div> 
+    </div> <!-- panal  4 end -->
+
+
+
+
+
+
+</div><!-- end -->
+
+<!-- C O F F E E   S E C T I O N  ===================================================================================================-->
+
+<!-- Grid -->
+    <div class="w3-center w3-padding-64" id="coffee">
+         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> Our Coffee's </span><br>
+    </div>
+
+<div class=" w3-white w3-padding-8 w3-row-padding " >
+
+  <div class="w3-row-padding w3-padding-8 " >
+     
+      <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
+      each of our coffees to be the very best they can be, fit for purpose.  
+   
+      Our <b>Green Label</b> coffee will always make, what we believe, everything an espresso coffee should be. 
+      Classy, Rich and Sophisticated. 
+  
+      Our <b>Yellow Label</b> decaf will never compromise on flavour and always use a natrual, non chemical, decafination process.
+   
+      Sometimes we come across coffees that are truely exceptional, with real personalities, and when we do we feel obliged to 
+      share them with you. We call this our Showcase coffee, you can find them in our <b>Reb Label</b> bags.
+      <br>
+      <br>
+      The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
+      these beliefs. 
+      <br>
+           <br>
+                <br>
+                     <br>
+          </p>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+    
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-mygreen1 w3-text-black w3-large  w3-wide  w3-padding-32"> Green Label </li>
+        <img src="/Images/3.jpg"alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16 w3-white "> <b> Name </b>: El Classico </li>
+        <li class="w3-padding-16 w3-text-black w3-mygreen1"> <b> Tasting </b>: Dark fruit & Nut </li>
+        <li class="w3-padding-16 w3-text-black w3-mygreen2"> <b> Origin </b>: Brazillian | Hounduran  </li>
+        <li class="w3-padding-16 w3-text-black w3-mygreen3"> <b> Process </b>: Pupled Natural | Washed </li>
+        <li class="w3-padding-16 w3-text-black w3-mygreen4"> <b> Verital </b>: Peaberry | Geisha </li>
+
+        <li class="w3-padding-16 w3-white">
+          <h2 class="w3-wide w3-white"">£15.50</h2>
+          <span class="w3-white">per Kilogram</span>
+        </li>
+        <li class="w3-mygreen4 w3-padding-24">
+          <button class="w3-button w3-mygreen4 w3-padding-small">Buy</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-myyellow1  w3-text-black w3-large  w3-wide  w3-padding-32">Yellow Label</li>
+        <img src="/Images/1.jpg"alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16 w3-white"> <b>Name</b>: El Decaffico</li>
+        <li class="w3-padding-16 w3-text-black w3-myyellow4  w3-text-black"> <b> Tasting </b>: Dark fruit & Nut </li>
+        <li class="w3-padding-16 w3-text-black w3-myyellow3  w3-text-black"> <b> Origin </b>: Brazilian </li>
+        <li class="w3-padding-16 w3-text-black w3-myyellow2  w3-text-black"> <b> Process </b>: Swiss Water Methord</li>
+        <li class="w3-padding-16 w3-text-black w3-myyellow1  w3-text-black"> <b> Verital </b>: Heirloom </li>
+
+        <li class="w3-padding-16 w3-white">
+          <h2 class="w3-wide w3-white"">£16.50</h2>
+          <span class="w3-white">per Kilogram</span>
+        </li>
+        <li class="w3-myyellow1 w3-padding-24">
+          <button class="w3-button  w3-myyellow1 w3-padding-small">Buy</button>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-myred1 w3-text-black  w3-wide  w3-large w3-padding-32"> Red Label </li>
+        <img src="/Images/2.jpg" alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16  w3-white "> <b> Name </b>: Gems of the Forest </li>
+        <li class="w3-padding-16  w3-text-black  w3-myred1"> <b> Tasting </b>: Peanutbutter & Green Apples</li>
+        <li class="w3-padding-16  w3-text-black  w3-myred2"> <b> Origin </b>: Ethiopian </li>
+        <li class="w3-padding-16  w3-text-black  w3-myred3"> <b> Process </b>: Pulped Honey</li>
+        <li class="w3-padding-16  w3-text-black  w3-myred4"> <b> Verital </b>: Geisha </li>
+        <li class="w3-padding-16  w3-white">
+          <h2 class="w3-wide w3-white"">£19.50</h2>
+          <span class="w3-white">per Kilogram</span>
+        </li>
+        <li class="w3-myred4 w3-padding-24">
+          <button class="w3-button w3-myred4 w3-padding-small">Buy</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- C O F F E E   S E C T I O N  E N D  =========================================================================================  -->
+
+<!-- A B O U T   S E C T I O N ===================================================================================================  -->
+
+
+<div class="w3-center w3-padding-64" id="about">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">About Us </span>
+</div>
+
+<!--   --> 
+<div class=" w3-theme-l1 w3-padding-16 w3-row-padding" > 
+    
+  <div class="w3-half">
+  <h2> Who we are</h2>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+  <p> Hi friends, We are <b>Two H</b>.  <p>
+
+</div>
+
+
+<div class="w3-half">
+<div class="w3-card-2 w3-white">
+  <img src="/Images/1.jpg" alt="Monterosso" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 3</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+<div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Latest goings on</span>
+</div>
+
+
+<!-- A B O U T   S E C T I O N  E N D =====================================================================================================  -->
+
+<!-- C O N T A C T   S U B M I S S I O N  ===================================================================================================-->
+ 
+  <!-- Contact -->
+  <div class="w3-center w3-padding-64" id="contact">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+  </div>
+
+  <form class="w3-container" action="/action_page.php" target="_blank">
+    <div class="w3-section">
+      <label>Name</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+    </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+    </div>
+    <div class="w3-section">
+      <label>Subject</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
+    </div>
+    <div class="w3-section">
+      <label>Message</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-black">Send</button>
+  </form>
+
+</div>
+<!-- C O N T A C T   S U B M I S S I O N   E N D  =================================================================================================-->
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+  <h4>Footer</h4>
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+
+
+
+
+
 <script>
+// Slideshow
 var slideIndex = 0;
 showSlides();
 
@@ -131,4 +401,4 @@ function showSlides() {
 </script>
 
 </body>
-</html> 
+</html>
