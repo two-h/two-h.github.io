@@ -72,7 +72,7 @@ body, html {
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><p>TWO H </p> <p> Coffee Roasters</p> </span>
   </div>
-  
+
 </div>
 
 <!-- Container (About Section) -->
@@ -155,97 +155,153 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+  <h3 class="w3-center">OUR COFFEES</h3>
+  <div class="w3-row-padding w3-padding-8 " >
+     
+      <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
+      each of our coffees to be the very best they can be, fit for purpose.  
+   
+      Our <b>Green Label</b> coffee will always make, what we believe, everything an espresso coffee should be. 
+      Classy, Rich and Sophisticated. 
+  
+      Our <b>Yellow Label</b> decaf will never compromise on flavour and always use a natrual, non chemical, decafination process.
+   
+      Sometimes we come across coffees that are truely exceptional, with real personalities, and when we do we feel obliged to 
+      share them with you. We call this our Showcase coffee, you can find them in our <b>Reb Label</b> bags.
+      <br>
+      <br>
+      The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
+      these beliefs. 
+      <br>
+           <br>
+                <br>
+                     <br>
+          </p>
     </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
+    
+ <!-- coffee 1 ==================================================================================================================== -->   
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-mygreen1 w3-text-black w3-large  w3-wide  w3-padding-32"> Green Label </li>
+        <img src="/Images/2.jpg"alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16 w3-white "> <b> Name </b>: El Classico </li>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          <button onclick="myFunction1('drop1')" class="w3-btn w3-block w3-mygreen3">
+          Infomation</button>
+          <div id="drop1" class="w3-hide w3-container w3-center ">
+                <li class="w3-text-black w3-left"> <b> Tasting </b><br> bla bla bla bla bla bla bla bla bla bla bla bla bla bla Dark fruit & Nut </li>
+                <li class="w3-text-black w3-left"> <b> Origin  </b><br> Brazillian & Hounduran, bla bla bla bla bla bla bla bla bla bla  </li>
+                <li class="w3-text-black w3-left"> <b> Process </b><br> Pupled Natural & Washed, bla bla bla bla bla bla bla bla bla bla </li>
+                <li class="w3-text-black w3-left"> <b> Verital </b><br> Peaberry & Geisha bla bla bla bla bla bla bla bla bla bla</li>
           </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+
+
+           <button onclick="myFunction1('drop2')" class="w3-btn w3-block w3-mygreen2">
+            Price</button>
+           <div id="drop2" class="w3-hide w3-container w3-center ">
+
+             <div class = "w3-half w3-left" >
+                   <li>£16.50</li>
+                   <span class=" w3-small w3-text-grey">1000g</span>
+                    </div>      
+
+                     <div class = "w3-half w3-right" >
+                      <li >£5.50</li>
+                     <span class=" w3-small w3-text-grey">250g</span>
+                     </div>                                             
+             </div>                                          
+
+        <li class="w3-mygreen1 w3-padding-24">
+          <button class="w3-button  w3-mygreen1 w3-padding-small">Buy</button>
+        </li>
+    
+      </ul>
+    </div> <!-- coffee 2 end -->
+
+ <!-- coffee 1 end ==================================================================================================================== -->   
+
+<!-- coffee 2 ================================================================================================================== -->
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-myyellow1  w3-text-black w3-large  w3-wide  w3-padding-32">Yellow Label</li>
+        <img src="/Images/1.jpg"alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16 w3-white"> <b> Name </b>: El Decaffico</li>
+
+
+         <button onclick="myFunction1('drop3')" class="w3-btn w3-block w3-myyellow3">
+          Infomation</button>
+          <div id="drop3" class="w3-hide w3-container w3-center ">
+                <li class="w3-text-black w3-left"> <b> Tasting </b><br> bla bla bla bla bla bla bla bla bla bla bla bla bla bla Dark fruit & Nut </li>
+                <li class="w3-text-black w3-left"> <b> Origin  </b><br> Brazillian & Hounduran, bla bla bla bla bla bla bla bla bla bla  </li>
+                <li class="w3-text-black w3-left"> <b> Process </b><br> Pupled Natural & Washed, bla bla bla bla bla bla bla bla bla bla </li>
+                <li class="w3-text-black w3-left"> <b> Verital </b><br> Peaberry & Geisha bla bla bla bla bla bla bla bla bla bla</li>
           </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  </div>
+
+
+           <button onclick="myFunction1('drop4')" class="w3-btn w3-block w3-myyellow2">
+            Price</button>
+           <div id="drop4" class="w3-hide w3-container w3-center ">
+
+             <div class = "w3-half w3-left" >
+                   <li>£16.50</li>
+                   <span class=" w3-small w3-text-grey">1000g</span>
+                    </div>      
+
+                     <div class = "w3-half w3-right" >
+                      <li >£5.50</li>
+                     <span class=" w3-small w3-text-grey">250g</span>
+                     </div>                                             
+             </div>                                          
+
+        <li class="w3-myyellow1 w3-padding-24">
+          <button class="w3-button  w3-myyellow1 w3-padding-small">Buy</button>
+        </li>
+    
+      </ul>
+    </div> 
+<!-- coffee 2 end  ======================================================================================================================== -->
+
+<!-- coffee 3  ======================================================================================================================== -->
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-myred1 w3-text-black  w3-wide  w3-large w3-padding-32"> Red Label </li>
+        <img src="/Images/2.jpg" alt="Vernazza" style="width:100%">
+        <li class="w3-padding-16  w3-white "> <b> Name </b>: Gems of the Forest </li>
+
+         <button onclick="myFunction1('drop5')" class="w3-btn w3-block w3-myred3">
+          Infomation</button>
+          <div id="drop5" class="w3-hide w3-container w3-center ">
+                <li class="w3-text-black w3-left"> <b> Tasting </b><br> bla bla bla bla bla bla bla bla bla bla bla bla bla bla Dark fruit & Nut </li>
+                <li class="w3-text-black w3-left"> <b> Origin  </b><br> Brazillian & Hounduran, bla bla bla bla bla bla bla bla bla bla  </li>
+                <li class="w3-text-black w3-left"> <b> Process </b><br> Pupled Natural & Washed, bla bla bla bla bla bla bla bla bla bla </li>
+                <li class="w3-text-black w3-left"> <b> Verital </b><br> Peaberry & Geisha bla bla bla bla bla bla bla bla bla bla</li>
+          </div>
+
+
+           <button onclick="myFunction1('drop6')" class="w3-btn w3-block w3-myred2">
+            Price</button>
+           <div id="drop6" class="w3-hide w3-container w3-center ">
+
+             <div class = "w3-half w3-left" >
+                   <li>£16.50</li>
+                   <span class=" w3-small w3-text-grey">1000g</span>
+                    </div>      
+
+                     <div class = "w3-half w3-right" >
+                      <li >£5.50</li>
+                     <span class=" w3-small w3-text-grey">250g</span>
+                     </div>                                             
+             </div>                                          
+
+        <li class="w3-myred1 w3-padding-24">
+          <button class="w3-button  w3-myred1 w3-padding-small">Buy</button>
+        </li>
+    
+      </ul>
+    </div> 
 </div>
 
 <!-- Footer -->
