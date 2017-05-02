@@ -362,52 +362,79 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="contact">
   <h3 class="w3-center">Get hold of us </h3>
     <p class="w3-center"><em>Two H</em></p>
+<div class="output-container">
+      <div class="output-sizer"> 
 
-<div class ="w3-center " id="grad1"> <!-- FORM BOX  -->
+        <div id="result_div" class="result"><iframe id="iFrameKey-a56014d7-61ca-6286-fb03-56a7c2db5750" src="https://s.codepen.io/boomerang/iFrameKey-a56014d7-61ca-6286-fb03-56a7c2db5750/index.html" name="CodePen" allowfullscreen="true" sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-modals allow-forms" allowtransparency="true" class="result-iframe"></iframe>
+          
 
-            <form class="w3-container w3-card-4">
-            <br>
-            <p>      
-            <label>Name</label>
-            <input class="w3-input w3-border" type="text" required="">
-            </p>
-            <p>      
-            <label>Email</label>
-            <input class="w3-input w3-border" type="text" required="">
-            </p>
-            <p>      
-            <label>Subject</label>
-            <textarea class="w3-input w3-border" style="resize:none"></textarea>
-            </p>
-            <br>
-              <div class="w3-row">
-              <div class="w3-half">
-                <input id="milk" class="w3-check" type="checkbox" checked="checked">
-                <label>Milk</label>
-                <br>
-                <input id="sugar" class="w3-check" type="checkbox">
-                <label>Sugar</label>
-                <br>
-                <input id="lemon" class="w3-check" type="checkbox" disabled="">
-                <label>Lemon (Disabled)</label>
-                <br><br>
-              </div>
+          <div class="assets-wrap" id="assets-wrap" style="display: none;">
 
-              <div class="w3-half">
-                <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked="">
-                <label>Male</label>
-                <br>
-                <input id="female" class="w3-radio" type="radio" name="gender" value="female">
-                <label>Female</label>
-                <br>
-                <input id="unknown" class="w3-radio" type="radio" name="gender" value="" disabled="">
-                <label>Don't know (Disabled)</label>
-              </div>
-              </div>
-              <p><button type="button" class="w3-btn w3-padding w3-teal" style="width:120px">Send &nbsp; ❯</button></p>
-            </form>
+  <div role="button" id="assets-area-close-button" class="assets-area-close-button">
+    <svg class="icon-x">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#x"></use>
+    </svg>
+    <span class="screen-reader-text">Close</span>
+  </div>
 
-            </div>
+
+    <div class="asset-upsell">
+
+      <div>
+        <h2>Asset uploading is a <span class="badge badge-pro">PRO</span> feature.</h2>
+        <p>As a PRO member, you can drag-and-drop upload files here to use as resources. Images, Libraries, JSON data... anything you want. You can even edit them anytime, like any other code on CodePen.</p>
+        <p><a href="/pro/" class="button green" target="_blank" rel="noopener">Go PRO</a></p>
+      </div>
+
+    </div>
+
+
+</div>
+
+
+
+          
+
+          <div id="editor-drag-cover" class="drag-cover"></div>
+
+        </div>
+
+        <div id="box-console" class="box box-console">
+
+  <div class="editor-resizer editor-resizer-console" title="Drag to resize. Double-click to expand."></div>
+
+  <div class="powers">
+    <div class="powers-drag-handle" title="Drag to resize. Double-click to expand."></div>
+    <div class="editor-actions-left">
+      <h2 class="box-title"><span class="box-title-name">Console</span></h2>
+      <div class="editor-actions-right">
+        <button class="button button-medium mini-button console-clear-button" title="Clear">
+          Clear
+        </button>
+        <button class="button button-medium mini-button close-editor-button" data-type="console" title="Close">
+          <svg class="icon-x">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#x"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="console-wrap">
+    <div class="console-entries short-no-scroll"></div>
+    <div class="console-command-line">
+      <span class="console-arrow forwards"></span>
+      <textarea class="console-command-line-input auto-expand" rows="1" data-min-rows="1"></textarea>
+    </div>
+  </div>
+
+</div>
+
+
+      </div> 
+
+    </div>
+
   
 </div>
 
