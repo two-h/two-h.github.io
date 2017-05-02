@@ -371,42 +371,47 @@ body, html {
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> High Wycombe, Buckinghamshire<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: number ??? <br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> High Wycombe, Bucks<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 07376285062<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: TwohCoffee@gmail.com<br>
-      </div>
+      </div> <!-- Add Google Maps -->
 
-<!--       <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form> -->
+
 
                   <!-- FORM START -->
 
   <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
+
+          <div class="w3-third">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
           </div>
-          <div class="w3-half">
+
+          <div class="w3-third">
             <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
           </div>
+
+          <div class = "w3-third" >
+                  <select name="country" size="4" multiple="multiple">
+
+                  <option name="Australia" value="Australia">Australia</option>
+                  <option name="Belgium" value="Belgium">Belgium</option>
+                  <option name="Germany" value="Germany">Germany</option>
+                  <option name="India" value="India" selected="selected">India</option>
+                  <option name="UK" value="UK">UK</option>
+                  <option name="USA" value="USA">USA</option>
+
+                  </select>
+          </div>
+
+
+
         </div>
         <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
+      </form>       
 
     </div>
   </div>
