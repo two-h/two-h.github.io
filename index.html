@@ -9,6 +9,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
+div.scroll
+{
+background-color:#00FFFF;
+width:40%;
+height:200PX;
+float: left;
+margin-left: 5%;
+padding: 1%;
+overflow:scroll;
+}
+
+
 #grad1 {
     height: auto;
     background: red; /* For browsers that do not support gradients */
@@ -407,7 +419,7 @@ body, html {
             <input class="w3-input" type="text" name="Email" required>
           </div>
 
-          <div  id="grad1" class="w3-section w3-scroll w3-text-white">     
+          <div  id="grad1" class="w3-section scroll w3-scroll w3-text-white">     
             <label><i class="fa fa-pencil w3-padding" aria-hidden="true"></i> Message</label>
             <input class="w3-input" type="text" name="Message" required>
           </div> 
@@ -491,8 +503,8 @@ function toggleFunction() {
     }
 }
 
-
 </script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
 
 
