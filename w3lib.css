@@ -25,13 +25,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 ::-webkit-input-placeholder{color:inherit;opacity:0.54}
 ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
 /* End extract */
-/*my overflow div*/
-<div class="scrollingDiv">foo</div> 
 
-div.scrollingDiv
-{
-   overflow:scroll;
-}
 
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.w3-serif{font-family:serif}
@@ -153,6 +147,12 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
 /* Colors  1D2F98*/
+
+.w3-g1,.w3-hover-g1:hover{color:#fff!important;background-color:#048163!important}
+.w3-y1,.w3-hover-y1:hover{color:#fff!important;background-color:#CFBF1D!important}
+.w3-r1,.w3-hover-r1:hover{color:#fff!important;background-color:#810422!important}
+
+
 .w3-mygreen1,.w3-hover-mygreen1:hover{color:#fff!important;background-color:#22997C!important}
 .w3-mygreen2,.w3-hover-mygreen2:hover{color:#fff!important;background-color:#2E967C!important}
 .w3-mygreen3,.w3-hover-mygreen3:hover{color:#fff!important;background-color:#39937D!important}
