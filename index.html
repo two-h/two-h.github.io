@@ -1,81 +1,55 @@
+<!DOCTYPE html>
 <html>
-<title>Two H | Coffee Roasters</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./w3lib.css">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-div.scroll
-{
-overflow:scroll;
-}
-#grad1 {
-    height: auto;
-    background: red; /* For browsers that do not support gradients GREEN */
-    background: -webkit-linear-gradient(#006633, #006666); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#006633, #006666);/* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#006633, #006666); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#006633, #006666); /* Standard syntax (must be last) */
-}
-#grad2 {
-    height: auto;
-    background: red; /* For browsers that do not support gradients  YELLOW */
-    background: -webkit-linear-gradient(#CCCC00,#CCCC66); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient (#CCCC00,#CCCC66);/* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#CCCC00,#CCCC66); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#CCCC00,#CCCC66); /* Standard syntax (must be last) */
-}
-#grad3 {
-    height: auto;
-    background: red; /* For browsers that do not support gradients  RED */
-    background: -webkit-linear-gradient(#990000, #CC0000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#990000, #CC0000);/* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#990000, #CC0000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#990000, #CC0000); /* Standard syntax (must be last) */
-}
-#grad4 {
-    height: auto;
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#8D1946, #B86F8B); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#8D1946, #B86F8B);/* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#8D1946, #B86F8B); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#8D1946, #B86F8B); /* Standard syntax (must be last) */
-}
-body,h1,h2,h3,h4,h5,h6 {font-family: 'Cormorant Garamond', serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
     height: 100%;
     color: #777;
-    line-height: 1.8;}
+    line-height: 1.8;
+}
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: cover;
+}
+
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("/Images/1.jpg");
-    min-height: 100%;}
+    background-image: url('/w3images/parallax1.jpg');
+    min-height: 100%;
+}
+
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/Images/2.jpg");
-    min-height: 400px;}
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+}
+
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("/Images/3.jpg");
-    min-height: 400px;}
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
-    }}
+    }
+}
 </style>
-
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -84,10 +58,10 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"> </i>HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT US</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> COFFEE'S</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT US </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -95,272 +69,178 @@ body, html {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT US</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT US</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text   w3-hover-opacity    -->
-<div class="bgimg-1 w3-display-container w3-opacity-min " id="home">
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TWO H </span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
   </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-
-<div class=" w3-row w3-padding w3-padding-64 w3-mobile w3-container"> <!-- accordians -->
- <h3 class="w3-center">OUR BUSINESS</h3>
-  <p class="w3-center"><em>Two H</em></p>
-
-    <p> Hello friends, Thanks for visiting. DISCRIBE HERE CONSISELY WHAT OUR MISSION STATEMENT IS. WHAT WE CAN DO FOR OUR CUSTOMERS sunt in culpa qui officia deserunt mollit aniad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani
-  </p>
-
-
-    <button onclick="myFunction1('D1')" class="w3-button w3-block w3-hover-light-blue w3-black w3-center"> shop</button>
-          <div id="D1" class=" w3-container w3-hide w3-animate-opacity ">
-          <p>Quallity, consistant, coffee that your buisness can depend on.</p>
-         </div>
-
-       <button onclick="myFunction1('D2')" class=" w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center"> home</button>
-          <div id="D2" class=" w3-container w3-hide w3-animate-opacity ">
-          <P>Something special for your kitchen cupboard </P>
-          </div>
-
-            <button onclick="myFunction1('D3')" class="w3-button w3-block w3-grey  w3-hover-light-blue w3-center"> tailored projects</button>
-                <div id="D3" class="w3-container w3-hide w3-animate-opacity ">
-                <p>Working with our customers to make coffees that are bespoke is a really exciting part of our buisness. 
-                Tell us about your projects and lets work together and create something unique</p>
-                </div>
-
-                <button onclick="myFunction1('D4')" class=" w3-button w3-block w3-light-grey  w3-hover-light-blue w3-center " > promises</button>
-                      <div id="D4" class="  w3-container w3-hide w3-animate-opacity ">
-                      <p>You have our word that every bag of coffee that leaves our roastery we <b>will</b> be proud of. That means it will be the same as the one that came before it. It will be delicious. And, it will be a of a fair & reasonable price</p>
-                      </div>
-  </div><!--  accordians -->
-</div>  
-
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">OUR STORY</h3>
-  <p class="w3-center"><em>Two H</em></p>
-
-  <p> hhad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit aniad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani
-  </p>
-
-  <div class="w3-row ">
-    <div class="w3-col m6 w3-center w3-half w3-left" width="500" height="333">
-      <img src="/Images/1.jpg" class="w3-image ">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I love photography</em></p>
+  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
     </div>
 
-    <div class="w3-col m6 w3-padding w3-half w3-right">
-      <p>THIS  TEXTddddS REMOVED ON SMALLER SCREENS Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad more et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
   </div>
 </div>
 
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16" id="grad1" >
-
-
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Thousands </span><br>
-    of coffee's enjoyed<br>
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
+    <span class="w3-xlarge">14+</span><br>
+    Partners
   </div>
-
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">1+</span><br>
-    Tonne Roasted <br>
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
   </div>
-
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Happy Clients<br>
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
   </div>
-
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">150+</span><br>
-    Meetings<br>
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
+    Meetings
   </div>
-
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">COFFEE </span>
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) w3-content -->
-<div class="w3-container w3-padding-64 w3-content " id="portfolio">
- <h3 class="w3-center">OUR COFFEE</h3>
-  <p class="w3-center"><em>Two H</em></p>
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
-  <div class="w3-row-padding w3-padding-8 " >
-     
-      <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
-      each of our coffees to be the very best they can be, fit for purpose.  
-   
-      Our <b>Green Label</b> coffee will always make, what we believe, everything an espresso coffee should be. 
-      Classy, Rich and Sophisticated. 
-  
-      Our <b>Yellow Label</b> decaf will never compromise on flavour and always use a natrual, non chemical, decafination process.
-   
-      Sometimes we come across coffees that are truely exceptional, with real personalities, and when we do we feel obliged to 
-      share them with you. We call this our Showcase coffee, you can find them in our <b>Reb Label</b> bags.
-      <br>
-      <br>
-      The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
-      these beliefs. </p>
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
     </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
 </div>
 
-<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-    <p><h2>Choose a Coffee </h2> </p><br>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Green Label </p>
-        </li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div  class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme-l2">
-          <p class="w3-xlarge">Yellow Label</p>
-        </li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div   class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Red Label</p>
-        </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
 </div>
-
-
 
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<!-- <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Get hold of us </h3>
-    <p class="w3-center"><em>Two H</em></p>
-  
-</div> -->
-
-
-
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center"> Reach us here </h3>
-    <p class="w3-center"><em>Two H</em></p>
-</div>
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
 
-<div class="w3-container w3-content w3-padding-64 w3-theme-l5" >
-
-  <p class="w3-center"><em> </em></p>
-
-      <div class="w3-row">
-        <div class="w3-col m5">
-        <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar"></span></div>
-
-          <p><i class="fa fa-map-marker w3-text-teal w3-xlarge">  </i>High Wycombe, Bucks</p>
-          <p><i class="fa fa-phone w3-text-teal w3-xlarge">  </i>07376285062</p>
-          <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge">  </i>twohcoffee@gmail.com</p>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
         </div>
-
-        <div id="grad1" class="w3-col m7 w3-round-xlarge ">
-          <form class="w3-container w3-padding-16 " action="/action_page.php" target="_blank">
-
-             <p class= "w3-padding w3-text-white"><em> I want to talk about... </em></p>
-                  <select class="w3-container w3-padding-16 "  name="Enquiry type">
-                    <option class = "w3-padding" value="Retail enquiry" >Buying coffee for my home</option>
-                    <option class = "w3-padding" value="trade enquiry">Buying coffee for my cafe</option>
-                    <option class = "w3-padding" value="Project enquiry">A cool idea Id like to run by Two H </option>
-                    <option class = "w3-padding" value="General enquiry">Something else</option>
-                  </select>
-
-          <div id="grad1" class="w3-section w3-text-white">       
-            <label> <i class="fa fa-user w3-padding" aria-hidden="true"></i> Name </label>
-            <input class="w3-input " type="text" name="Name" required>
-          </div>
-
-          <div  id="grad1" class="w3-section w3-text-white">    
-            <label> <i class="fa fa-envelope-o w3-padding" aria-hidden="true"></i> Name </label>
-            <input class="w3-input" type="text" name="Email" required>
-          </div>
-
-          <div  id="grad1" class="w3-section scroll w3-scroll w3-text-white">     
-            <label><i class="fa fa-pencil w3-padding" aria-hidden="true"></i> Message</label>
-            <input class="w3-input" type="text" name="Message" required>
-          </div> 
-
-          <input class="w3-check" type="checkbox" checked name="Like">
-          <label>I Like it!</label>
-          <button type="submit" class="w3-button w3-right w3-theme">Send</button>
-
-          </form>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
     </div>
   </div>
 </div>
 
-<div id="googleMap" style="width:100%;height:420px;"></div>
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -370,24 +250,27 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
 <!-- Add Google Maps -->
 <script>
 function myMap()
 {
-  myCenter=new google.maps.LatLng(51.628680, -0.748779);
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
   var mapOptions= {
     center:myCenter,
     zoom:12, scrollwheel: false, draggable: false,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
   var marker = new google.maps.Marker({
     position: myCenter,
   });
   marker.setMap(map);
 }
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -395,6 +278,7 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -405,15 +289,7 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
     }
 }
-// Drop accordions
-        function myFunction1(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else { 
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
+
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
@@ -424,6 +300,11 @@ function toggleFunction() {
     }
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
 </body>
 </html>
