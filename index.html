@@ -1,54 +1,79 @@
-<!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Two H | Coffee Roasters</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="./w3lib.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+div.scroll
+{
+overflow:scroll;
+}
+#grad1 {
+    height: auto;
+    background: red; /* For browsers that do not support gradients GREEN */
+    background: -webkit-linear-gradient(#006633, #006666); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#006633, #006666);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#006633, #006666); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#006633, #006666); /* Standard syntax (must be last) */
+}
+#grad2 {
+    height: auto;
+    background: red; /* For browsers that do not support gradients  YELLOW */
+    background: -webkit-linear-gradient(#CCCC00,#CCCC66); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient (#CCCC00,#CCCC66);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CCCC00,#CCCC66); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CCCC00,#CCCC66); /* Standard syntax (must be last) */
+}
+#grad3 {
+    height: auto;
+    background: red; /* For browsers that do not support gradients  RED */
+    background: -webkit-linear-gradient(#990000, #CC0000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#990000, #CC0000);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#990000, #CC0000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#990000, #CC0000); /* Standard syntax (must be last) */
+}
+#grad4 {
+    height: auto;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#8D1946, #B86F8B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#8D1946, #B86F8B);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#8D1946, #B86F8B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#8D1946, #B86F8B); /* Standard syntax (must be last) */
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Cormorant Garamond', serif;}
 body, html {
     height: 100%;
     color: #777;
-    line-height: 1.8;
-}
-
+    line-height: 1.8;}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
+    background-size: cover;}
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
-}
-
+    background-image: url("/Images/1.jpg");
+    min-height: 100%;}
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
-    min-height: 400px;
-}
-
+    background-image: url("/Images/2.jpg");
+    min-height: 400px;}
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
-    min-height: 400px;
-}
-
+    background-image: url("/Images/3.jpg");
+    min-height: 400px;}
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }
-}
 </style>
 <body>
 
