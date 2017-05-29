@@ -75,7 +75,7 @@ body, html {
         background-attachment: scroll;
     }
 
- document.getElementById("myP").style.fontVariant = "small-caps"; 
+
    
 </style>
 <body>
@@ -97,7 +97,9 @@ body, html {
     </div>
 </div>
 
-<myP>YahDunKno</myP>
+<p id="SC" style="font-variant:small-caps">Ya Dun No Ya Bish</p>
+
+
 
 
 <!-- First Parallax Image with Logo Text -->
@@ -359,6 +361,11 @@ body, html {
  
 <!-- Add Google Maps -->
 <script>
+
+function mySmallCaps() {
+    alert(document.getElementById("SC").style.fontVariant);
+}
+
 
 function myMap()
 {
