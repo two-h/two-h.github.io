@@ -168,6 +168,7 @@ body, html {
   </div>
 </div>
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
+
   <h3 class="w3-center">OUR COFFEE'S</h3>
       <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
       each of our coffees to be the very best they can be, fit for purpose.  
@@ -356,23 +357,7 @@ body, html {
  
 <!-- Add Google Maps -->
 <script>
-// Tabs
-function openLink(evt, linkName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("myLink");
-  for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" w3-light-blue", "");
-  }
-  document.getElementById(linkName).style.display = "block";
-  evt.currentTarget.className += " w3-red";
-}
-// Click on the first tablink on load
-document.getElementsByClassName("tablink")[0].click();
-function myMap()
+
 {
   myCenter=new google.maps.LatLng(41.878114, -87.629798);
   var mapOptions= {
