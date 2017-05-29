@@ -265,6 +265,9 @@ body, html {
   </div>
 </div>
 
+
+
+
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
   <h3 class="w3-center">REACH US</h3>
@@ -272,47 +275,58 @@ body, html {
 </div>
 
 <div class="w3-content">
-<form class="w3-container w3-card-4">
+<form class="w3-container w3-card-4 " action="/action_page.php" target="_blank">
+
+  <select class="w3-container w3-padding-16 "  name="Enquiry type" required>
+    <option class = "w3-padding" value="Retail enquiry" > Buy some coffee for my Home</option>
+    <option class = "w3-padding" value="trade enquiry"  > Getting a wholesale Price List</option>
+    <option class = "w3-padding" value="Project enquiry"> A collabrotive Idea </option>
+    <option class = "w3-padding" value="General enquiry">Something else</option>
+  </select>
 
   <div class="w3-section">   
     <label>Name</label>   
-    <input class="w3-input" type="text" required>
+    <input class="w3-input" type="text" value="client name" required>
   </div>
 
   <div class="w3-section">  
-    <label>Email</label>    
-    <input class="w3-input" type="text" required>
+    <label>Email address </label>    
+    <input class="w3-input" type="text" value="client Email" required>
   </div>
 
-  <div class="w3-section">     
-    <label>Subject</label>   
-    <input class="w3-input" type="text" required>
+
+
+<!--   <div class="w3-row">
+
+        <div class="w3-half">
+          <input id="milk" class="w3-check" type="checkbox" checked="checked">
+          <label>Milk</label>
+          <br>
+          <input id="sugar" class="w3-check" type="checkbox">
+          <label>Sugar</label>
+          <br>
+          <input id="lemon" class="w3-check" type="checkbox" disabled>
+          <label>Lemon (Disabled)</label>
+          <br><br>
+        </div>
+
+        <div class="w3-half">
+          <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+          <label>Male</label>
+          <br>
+          <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+          <label>Female</label>
+          <br>
+          <input id="unknown" class="w3-radio" type="radio" name="gender" value="" disabled>
+          <label> Don't know (Disabled)</label>
+        </div>
+  </div>
+ -->
+    <div class="w3-section">     
+    <label>Additional Comments </label>   
+    <input class="w3-input" type="text">
   </div>
 
-  <div class="w3-row">
-  <div class="w3-half">
-    <input id="milk" class="w3-check" type="checkbox" checked="checked">
-    <label>Milk</label>
-    <br>
-    <input id="sugar" class="w3-check" type="checkbox">
-    <label>Sugar</label>
-    <br>
-    <input id="lemon" class="w3-check" type="checkbox" disabled>
-    <label>Lemon (Disabled)</label>
-    <br><br>
-  </div>
-
-  <div class="w3-half">
-    <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
-    <label>Male</label>
-    <br>
-    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
-    <label>Female</label>
-    <br>
-    <input id="unknown" class="w3-radio" type="radio" name="gender" value="" disabled>
-    <label> Don't know (Disabled)</label>
-  </div>
-  </div>
 </form>
 </div>
 
