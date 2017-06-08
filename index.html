@@ -81,26 +81,33 @@ body, html {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }
+
+.mySlides {display:none}
+.demo {cursor:pointer}
+
 </style>
 <body>
 
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-light-blue w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
     </a>
-
-  <a href="#contact" class="w3-bar-item  w3-right w3-text-dark-grey w3-button w3-hide-small">CONTACT US </a>
-        <!-- <a href="#" class="w3-bar-item w3-button  w3-right  w3-hide-small w3-right w3-hover-red"> </a> -->
-  <a href="#portfolio" class="w3-bar-item w3-right  w3-text-dark-grey w3-button w3-hide-small">COFFEE'S</a>
-  <a href="#about" class="w3-bar-item w3-right w3-text-dark-grey w3-button w3-hide-small">ABOUT US</a>
-  <a href="#home" class="w3-bar-item w3-left w3-text-dark-grey w3-button"><b>TWO&nbsp;&nbsp;H</b> </a>
+    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"> </i>HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT US</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> COFFEE'S</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT US </a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT US</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S &nbsp;&nbsp;</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT US</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
@@ -111,11 +118,7 @@ body, html {
   </div>
 </div>
 
-<!-- <div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">ABOUT US </span>
-  </div>
-</div> -->
+
 <!-- Container (About Section) -->
 
 <div class="w3-content w3-container w3-padding-64" id="about">
@@ -173,38 +176,8 @@ body, html {
 
                       <br>
                       <br>
-
-   <!--    <div class= "w3-container "> -->
-<!--         <h3 class="w3-center">OUR STORY</h3> -->
-<!--         <p class="w3-center"><em>Two H</em></p>
- -->
-<!--         <p> hhad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit aniad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani
-        </p> -->
 </div> 
-<!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16" id="grad1" >
-     <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">Thousands </span><br>
-          of coffee's enjoyed<br>
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">1+</span><br>
-          Tonne Roasted <br>
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">10+</span><br>
-          Happy Clients<br>
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">150+</span><br>
-          Meetings<br>
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
-   </div>
-</div> -->
+
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -213,7 +186,6 @@ body, html {
 </div>
 
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-
   <h3 class="w3-center"> OUR COFFEE'S </h3>
       <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
       each of our coffees to be the very best they can be, fit for purpose.  
@@ -228,15 +200,14 @@ body, html {
       The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
       these beliefs. </p>
 </div>
-<div class="w3-row-padding w3-padding-64 w3-center " >
 
+
+<div class="w3-row-padding w3-padding-64 w3-center " >
     <div  class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-card-4  ">
-
         <li class="w3-theme-l2 w3-g1">
           <p class="w3-xlarge">GREEN LABEL</p>
         </li>  
-
           <img src="/Images/1.jpg" style="width:100%">
           <p> El Classico</p>
           <!--   <p class="w3-padding-16 w3-center "> <b>EL classico </b> </p> -->
@@ -249,37 +220,19 @@ body, html {
                       <li > <b> Verital </b> <br> Peaberry & Geisha </li>
                     </ul> 
                   </div>
-    
-<!--                      <button onclick="myFunction1('D33')" class="w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center">   <a id="SC" class="w3-center" style="font-variant:small-caps"> Pricing </a></button>
-                        <div id="D33" class=" w3-container w3-hide w3-animate-opacity ">
-                         <ul style="list-style-type:none; margin:0; padding: 0;">
 
-                         <li class="w3-padding-16">
+             <button onclick="myFunction1('D33')" class="w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center">   <a id="SC" class="w3-center" style="font-variant:small-caps"> Pricing </a></button>
+                  <div id="D33" class=" w3-container w3-hide w3-animate-opacity ">
+                     <ul style="list-style-type:none; margin:0; padding: 0;">
+                                              <li class="w3-padding-16">
                             <h2 class="w3-wide"><i class="fa fa-gbp"></i> 15.95</h2>
                             <span class="w3-opacity">per kilo</span>
                           </li> 
 
                           </ul>
-                        </div> -->
-
-                     <button onclick="myFunction1('D33')" class="w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center"> Pricing</button>
-                        <div id="D33" class=" w3-container w3-hide w3-animate-opacity ">
-                          <table class="w3-center">
-                            <tr>
-                              <td > retail figure </td>
-                              <td> &nbsp; </td>
-                              <td > Wholesale figure </td>
-                            </tr>
-                            <tr>
-                              <td > 350g's </td>
-                              <td> &nbsp; </td>
-                              <td > 1000g's</td>
-                            </tr>
-                        </table>
-
-                      </div>
-               </ul>
-    </div>
+                        </div>
+                      </ul>
+                  </div>
 
 
 
@@ -343,6 +296,30 @@ body, html {
       </ul>
     </div>
 </div> 
+
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="/Images/1.jpg"  style="width:100%">
+  <img class="mySlides" src="/Images/2.jpg" style="width:100%">
+  <img class="mySlides" src="/Images/3.jpg" style="width:100%">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_nature_wide.jpg" style="width:100%" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_fjords_wide.jpg" style="width:100%" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_mountains_wide.jpg" style="width:100%" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
 
 <!-- Third Parallax Image with Portfolio Text -->
@@ -431,6 +408,33 @@ body, html {
  
 <!-- Add Google Maps -->
 <script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
 
 function mySmallCaps() {
     alert(document.getElementById("SC").style.fontVariant);
