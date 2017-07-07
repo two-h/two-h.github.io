@@ -62,7 +62,7 @@ body, html {
     color: #777;
     line-height: 1.8;}
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3 .bgimg-4 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,6 +79,11 @@ body, html {
 .bgimg-3 {
     background-image: url("/Images/3.jpg");
     min-height: 400px;}
+
+.bgimg-4 {
+    background-image: url("/Images/purewhite.png");
+    min-height: 400px;}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 /* Turn off parallax scrolling for tablets and phones */
@@ -126,8 +131,7 @@ body, html {
 
 </div>
  -->
- <!-- bgimg-1  -->
-<div class="w3-display-container  " id="home">
+<div class="bgimg-4 w3-display-container  " id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">  
   <img src="/Images/Logo.png" style="width:100%"> 
   </div>
@@ -178,7 +182,7 @@ body, html {
 
                 <button onclick="myFunction1('D4')" class=" w3-button w3-block w3-light-grey  w3-hover-light-blue w3-center " > PROMISES</button>
 
-                      <div id="D4" class="  w3-container w3-hide w3-animate-opacity ">  
+                      <div id="D4" class="  w3-container w3-hide w3-animate-opacity ">
                 <p> The important bit </p>
 
                       <p>When we started roasting coffee we decided that we would opporate in a way that which we would could be genuinely proud of. What does this mean for you ?</p>
