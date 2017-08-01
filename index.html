@@ -4,15 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./w3lib.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Brawler" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-
 <style>
 div.scroll
 {
@@ -50,66 +44,52 @@ overflow:scroll;
     background: -moz-linear-gradient(#8D1946, #B86F8B); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#8D1946, #B86F8B); /* Standard syntax (must be last) */
 }
-
-
-
-
-body,h1,h2,h3,h4,h5,h6,span {font-family: 'Playfair Display', serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Cormorant Garamond', serif;}
 body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;}
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 .bgimg-4 {
+.bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("/Images/purewhite.png");
-    min-height:100%;}
-/* Second image (coffees) */
+    background-image: url("/Images/1.jpg");
+    min-height: 100%;}
+/* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/Images/DSC01567.JPG");
-    min-height:400px;}
+    background-image: url("/Images/2.jpg");
+    min-height: 400px;}
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("/Images/DSC01430.JPG");
-    min-height:400px;}
-/* First image (Logo. Full height) */
-.bgimg-4 {
-    background-image: url("/Images/purewhite.png");
-    min-height:400px;}
-
+    background-image: url("/Images/3.jpg");
+    min-height: 400px;}
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4  {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }}
-
-.mySlides {display:none}
-.demo {cursor:pointer}
-
 </style>
+
 <body>
 
+<!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-        <a href="#" class=" w3-right w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"> </i>HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT US</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> COFFEE'S</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT US </a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
-    <a href="#home" class=" w3-left w3-bar-item w3-button">TWO H </a>
-
-<div class="w3-right">
-    <a href="#about" class="   w3-bar-item w3-button w3-hide-small">ABOUT US</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">COFFEE'S </a>
-   <a href="#contact" class=" w3-bar-item w3-button w3-hide-small"> CONTACT US </a>
-</div>
     </a>
   </div>
 
@@ -118,420 +98,270 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT US</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT US</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text   w3-hover-opacity    -->
-<div class="bgimg-1 w3-display-container" id="home">
-      <div class="w3-display-middle" > <!-- style="white-space:nowrap;"> -->
-        <div >
-         <img src="/Images/Logo.png" style="width:350px"> 
-        </div>
-      </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">OUR BUSINESS</span>
+<div class="bgimg-1 w3-display-container w3-opacity-min " id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TWO H </span>
   </div>
 </div>
 
 <!-- Container (About Section) -->
-
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">OUR BUSINESS</h3>
 
-  <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to see what we can do for you. 
+<div class=" w3-row w3-padding w3-padding-64 w3-mobile w3-container"> <!-- accordians -->
+ <h3 class="w3-center">OUR BUSINESS</h3>
+  <p class="w3-center"><em>Two H</em></p>
+
+    <p> Hello friends, Thanks for visiting. DISCRIBE HERE CONSISELY WHAT OUR MISSION STATEMENT IS. WHAT WE CAN DO FOR OUR CUSTOMERS sunt in culpa qui officia deserunt mollit aniad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani
   </p>
 
-  <br>
 
-    <button onclick="myFunction1('D1')" class="w3-button w3-block w3-hover-light-blue w3-black w3-center">  WHOLESALE </button>
-          <div id="D1" class="w3-container w3-hide w3-animate-opacity ">  <!-- w3-leftbar w3-sand  -->
-  <!--           <p><b>Quallity, consistant, coffee that your buisness can depend on</b></p> -->
-          <span class="w3-center"> <h4> <i> Quallity, consistant, coffee that your shop can depend on</i> </h4> </span> 
-
-          <p> Suppling coffee for cafes, bars and restarunts is our core business, and its one that we know and do well. The owners of Two H started their coffee journies making espressos for and running speciallity coffee shops, and have a combied 10 years of experience in that trade. </p>
-         
-          <p>
-          To that end, we at Two H believe delisious coffee should be unprotentious and accsessable. This is why we are upfront with our pricing here on our website, and too our knowlage are the only roastery to use a volume pricing model, offering savings to our customers where ever we can. We also invite or clients along to the roastery, Where they are able to bring their staff and get hands on with the roasting process. The idea being that they would then be able to take enthusiam and knowlage back to work with them and share with thier customers. 
-
-          We beielve these are amoungst the things that set us apart as a company. As ultimatly building relationships, especially in the service industry, is key to our combinded success. 
-          <br>
+    <button onclick="myFunction1('D1')" class="w3-button w3-block w3-hover-light-blue w3-black w3-center"> shop</button>
+          <div id="D1" class=" w3-container w3-hide w3-animate-opacity ">
+          <p>Quallity, consistant, coffee that your buisness can depend on.</p>
          </div>
 
-       <button onclick="myFunction1('D2')" class=" w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center">HOME</button>
+       <button onclick="myFunction1('D2')" class=" w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center"> home</button>
           <div id="D2" class=" w3-container w3-hide w3-animate-opacity ">
-          <span class="w3-center"> <h4> <i> Something special for the kitchen cupboard </i> </h4> </span> 
+          <P>Something special for your kitchen cupboard </P>
+          </div>
 
-          <p> We know how important that morning brew is so all our coffee's are available in smaller bags for kitchen cupboards up and down the country. We also offer a contiunously changing small batch coffee, along side our espresso & decaf coffee, giving the home enthusiast the abillity to experence single origin coffees from all over the world. 
-          </p>
-
-         </div>
-
-            <button onclick="myFunction1('D3')" class="w3-button w3-block w3-grey  w3-hover-light-blue w3-center"> COLLABORATIONS</button>
-                <div id="D3" class="   w3-container w3-hide w3-animate-opacity ">
-
-                <span class="w3-center"> <h4> <i> Truly uniquie coffees to make your shop or project stand out </i> </h4> </span> 
-
-                  <p> Although its true to say all our customers are fellow collaborators sometimes we are approchaed with a unique and exciting ideas that need a personal touch. Where we work together with our clients to create unique coffee's and branding for their projetcs, bit more info here. ask olly about wording blablabla.
-                  There are some examples of this in our gallery section.
-                  </p>
+            <button onclick="myFunction1('D3')" class="w3-button w3-block w3-grey  w3-hover-light-blue w3-center"> tailored projects</button>
+                <div id="D3" class="w3-container w3-hide w3-animate-opacity ">
+                <p>Working with our customers to make coffees that are bespoke is a really exciting part of our buisness. 
+                Tell us about your projects and lets work together and create something unique</p>
                 </div>
 
-                <button onclick="myFunction1('D4')" class=" w3-button w3-block w3-light-grey  w3-hover-light-blue w3-center " > PROMISES</button>
+                <button onclick="myFunction1('D4')" class=" w3-button w3-block w3-light-grey  w3-hover-light-blue w3-center " > promises</button>
                       <div id="D4" class="  w3-container w3-hide w3-animate-opacity ">
+                      <p>You have our word that every bag of coffee that leaves our roastery we <b>will</b> be proud of. That means it will be the same as the one that came before it. It will be delicious. And, it will be a of a fair & reasonable price</p>
+                      </div>
+  </div><!--  accordians -->
+</div>  
 
-                <span class="w3-center"> <h4> <i> The important bit </i> </h4> </span> 
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">OUR STORY</h3>
+  <p class="w3-center"><em>Two H</em></p>
 
-                      <p>When we started roasting coffee we decided that we would opporate in a way that which we would could be genuinely proud of. What does this mean for you ?</p>
+  <p> hhad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit aniad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani
+  </p>
 
-                      <li> Every bag of coffee that leaves the roastery will be same the the one before it, delsious and of fair & reasonable price.</li>
-                      <li> All customers, reguardless of order size, will be treated the same, In a personable and respectful mannor. </li>
-                      <li> something else here. </li>
-                    </div>
+  <div class="w3-row ">
+    <div class="w3-col m6 w3-center w3-half w3-left" width="500" height="333">
+      <img src="/Images/1.jpg" class="w3-image ">
+    </div>
 
-                      <br>
-                      <br>
-</div> 
+    <div class="w3-col m6 w3-padding w3-half w3-right">
+      <p>THIS  TEXTddddS REMOVED ON SMALLER SCREENS Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad more et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16" id="grad1" >
+
+
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">Thousands </span><br>
+    of coffee's enjoyed<br>
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+  </div>
+
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">1+</span><br>
+    Tonne Roasted <br>
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+  </div>
+
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">10+</span><br>
+    Happy Clients<br>
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+  </div>
+
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings<br>
+    <i class="fa fa-check-circle" aria-hidden="true"></i>
+  </div>
+
+</div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">COFFEES</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">COFFEE </span>
   </div>
 </div>
 
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center"> OUR COFFEE'S </h3>
+<!-- Container (Portfolio Section) w3-content -->
+<div class="w3-container w3-padding-64 w3-content " id="portfolio">
+ <h3 class="w3-center">OUR COFFEE</h3>
+  <p class="w3-center"><em>Two H</em></p>
 
-      <p>At<b>Two H</b> we believe in simplcity and offer three, carefully profiled, coffees fit for purpose. 
-
-
-      Our <b> Seasonal Espresso </b> beans will always make, what we believe, everything an espresso coffee should be. 
+  <div class="w3-row-padding w3-padding-8 " >
+     
+      <p>   At <b>Two H</b> we believe in simplcity and our offering for you reflects this. We source our green stock to roast & blend
+      each of our coffees to be the very best they can be, fit for purpose.  
+   
+      Our <b>Green Label</b> coffee will always make, what we believe, everything an espresso coffee should be. 
       Classy, Rich and Sophisticated. 
   
-      Our <b>Blue Label</b> decaf will never compromise on flavour and always use a natrual, non chemical, decafination process.
+      Our <b>Yellow Label</b> decaf will never compromise on flavour and always use a natrual, non chemical, decafination process.
    
       Sometimes we come across coffees that are truely exceptional, with real personalities, and when we do we feel obliged to 
-      share them with you. We call this our Showcase coffee, you can find them in our <b>Red Label</b> bags.
+      share them with you. We call this our Showcase coffee, you can find them in our <b>Reb Label</b> bags.
+      <br>
+      <br>
       The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
       these beliefs. </p>
-
+    </div>
 </div>
 
-<div class="w3-row-padding w3-padding-64 w3-center " >
-    <div  class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-card-4  ">
-        <li class="w3-theme-l2 w3-g1">
-          <p class="w3-xlarge"> Seasonal Espresso </p>
-        </li>  
-          <img src="/Images/espresso.jpg" style="width:100%">
-          <p> El Classico</p>
-          <!--   <p class="w3-padding-16 w3-center "> <b>EL classico </b> </p> -->
-             <button onclick="myFunction1('D32')" class="w3-button w3-block  w3-light-grey w3-hover-light-blue w3-center"> Provenance & Tasting </button>
-                  <div id="D32" class="  w3-container w3-hide w3-animate-opacity ">
-                   <ul style="list-style-type:none; margin:0; padding: 0;">
-                      <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                      <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                      <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                      <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                    </ul> 
-                  </div>
-             <button onclick="myFunction1('D33')" class="w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center"> Pricing </button>
-                  <div id="D33" class=" w3-container w3-hide w3-animate-opacity ">
-                        <br>
-                              <h4> 1 Kilogram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 10 </td>
-                                  <td>  Between 10 & 30 </td>
-                                  <td>  More than 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                        <br>
-                             <h4> 250 gram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 5 </td>
-                                  <td>  Between 5 & 15</td>
-                                  <td>  More than 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                              <br>
-                        </div>
-                      </ul>
-                  </div>
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <p><h2>Choose a Coffee </h2> </p><br>
 
-    <div  class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-card-4  ">
-        <li class=" w3-y1 w3-theme-l2">
-          <p class="w3-xlarge">Seasonal Decaf Espresso </p>
-        </li>           
-          <img src="/Images/decaf.jpg" style="width:100%">
-           <p > El Decaffico</p>
-            <!-- <li class="w3-padding-16 w3-center  "><b>EL decaffico </b> </li> -->
-             <button onclick="myFunction1('D34')" class="w3-button w3-light-grey w3-block w3-hover-light-blue w3-center">Provenance & Tasting</button>
-                  <div id="D34" class="   w3-container w3-hide w3-animate-opacity ">
-                    <ul style="list-style-type:none; margin:0; padding: 0;">
-                      <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                      <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                      <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                      <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                    </ul> 
-                  </div>
-                     <button onclick="myFunction1('D35')" class="w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center"> Pricing </button>
-                        <div id="D35" class="   w3-container w3-hide w3-animate-opacity ">
-                                                 <br>
-                              <h4> 1 Kilogram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 10 </td>
-                                  <td>  Between 10 & 30 </td>
-                                  <td>  More than 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                        <br>
-                             <h4> 250 gram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 5 </td>
-                                  <td>  Between 5 & 15</td>
-                                  <td>  More than 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                              <br>
-                        </div>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Green Label </p>
+        </li>
+        <li class="w3-padding-16"><b>10GB</b> Storage</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
       </ul>
     </div>
 
-    <div  class="w3-third   w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-card-4  ">
-        <li class=" w3-r1  w3-theme-l2">
-          <p class="w3-xlarge"> Limited Edition</p>
-        </li>           
-          <img src="/Images/limited.jpg" style="width:100%">
-            <p> Special Brew</p>
-             <button onclick="myFunction1('D36')" class="w3-button  w3-light-grey w3-block w3-hover-light-blue w3-center"> Provenance & Tasting</button>
-                  <div id="D36" class="   w3-container w3-hide  w3-animate-opacity ">
-                  <ul style="list-style-type:none; margin:0; padding: 0;">
-                      <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                      <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                      <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                      <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                    </ul> 
-                  </div>
-                     <button onclick="myFunction1('D37')" class="w3-button w3-dark-grey w3-block w3-hover-light-blue w3-center"> Pricing </button>
-                        <div id="D37" class="w3-container w3-hide w3-animate-opacity w3-sand">
-                        <br>
-                              <h4> 1 Kilogram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 10 </td>
-                                  <td>  Between 10 & 30 </td>
-                                  <td>  More than 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                        <br>
-                             <h4> 250 gram Bags </h4>
-                              <table class="w3-table w3-striped w3-small w3-border">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  Less than 5 </td>
-                                  <td>  Between 5 & 15</td>
-                                  <td>  More than 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                              <br>
-                        </div>
+    <div  class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Yellow Label</p>
+        </li>
+        <li class="w3-padding-16"><b>25GB</b> Storage</li>
+        <li class="w3-padding-16"><b>25</b> Emails</li>
+        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
       </ul>
     </div>
-<!-- end of coffee drop downs -->
-</div>  
 
-
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">US IN ACTION </span>
-  </div>
+    <div   class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Red Label</p>
+        </li>
+        <li class="w3-padding-16"><b>50GB</b> Storage</li>
+        <li class="w3-padding-16"><b>50</b> Emails</li>
+        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
 </div>
-
-
-
-<div class="w3-mobile w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">Behind the scenes </h3>
-  <p class="w3-center"> <em>click to enlarge and know a bit more about whats going on </em></p>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class=" w3-center">
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/2.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="CBLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/2.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-  </div>
-
-  <div class="w3-center ">
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/1.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/2.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-
-    <div class="w3-col m3 w3-panel">
-      <img src="/Images/3.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-</div>
-
-
-
 
 
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
-
-
-
 <!-- Container (Contact Section) -->
+<!-- <div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Get hold of us </h3>
+    <p class="w3-center"><em>Two H</em></p>
+  
+</div> -->
+
+
+
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">REACH US</h3>
-  <p class="w3-center"><em>By filling out this form</em></p>
+  <h3 class="w3-center"> Reach us here </h3>
+    <p class="w3-center"><em>Two H</em></p>
 </div>
 
-<div class="w3-content">
+<div class="w3-container w3-content w3-padding-64 w3-theme-l5" >
 
-    <form class="w3-container w3-card-4 " action="/action_page.php" target="_blank">
-      
-        <div class="w3-margin-top">
-          <span class="w3-large w3-bottombar "> Id like to talk to Two H about </span>
-        </div>
-        <br>
+  <p class="w3-center"><em> </em></p>
 
-        <table>
+      <div class="w3-row">
+        <div class="w3-col m5">
+        <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar"></span></div>
 
-        <tr>
-          <td style="vertical-align:bottom;"> <label>Buying some coffee for my home</label> </td>
-          <td> &nbsp; </td>
-          <td><input id="Home" class="w3-radio " type="radio" name="Button" value="Retail" checked></td> 
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"><label>Buying some coffee for my shop</label></td>
-          <td> &nbsp; </td>
-          <td> <input id="Shop" class="w3-radio " type="radio" name="Button" value="WholeSale"></td>      
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"> <label> A collabrotive Idea</label></td>
-          <td> &nbsp; </td>
-          <td><input id="Colab" class="w3-radio " type="radio" name="Button" value="Colab" ></td> 
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"><label>Something else</label></td>
-                    <td> &nbsp; </td>
-          <td  ><input id="Other" class="w3-radio" type="radio" name="Button" value="Other" align="top"></td>      
-        </tr>
-        </table>
-<br>
-      <div class="w3-section">   
-        <label>Name</label>   
-        <input class="w3-input" type="text" required>
-      </div>
-
-       <div class="w3-section">  
-          <label>Email address  </label>    
-         <input class="w3-input" type="text" required>
-       </div>
-
-        <div class="w3-section">     
-          <label>Additional Comments </label>   
-          <input class="w3-input" type="text">
+          <p><i class="fa fa-map-marker w3-text-teal w3-xlarge">  </i>High Wycombe, Bucks</p>
+          <p><i class="fa fa-phone w3-text-teal w3-xlarge">  </i>07376285062</p>
+          <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge">  </i>twohcoffee@gmail.com</p>
         </div>
 
-  </form>
-  <br>
-  <br>
+        <div id="grad1" class="w3-col m7 w3-round-xlarge ">
+          <form class="w3-container w3-padding-16 " action="/action_page.php" target="_blank">
 
+             <p class= "w3-padding w3-text-white"><em> I want to talk about... </em></p>
+                  <select class="w3-container w3-padding-16 "  name="Enquiry type">
+                    <option class = "w3-padding" value="Retail enquiry" >Buying coffee for my home</option>
+                    <option class = "w3-padding" value="trade enquiry">Buying coffee for my cafe</option>
+                    <option class = "w3-padding" value="Project enquiry">A cool idea Id like to run by Two H </option>
+                    <option class = "w3-padding" value="General enquiry">Something else</option>
+                  </select>
+
+          <div id="grad1" class="w3-section w3-text-white">       
+            <label> <i class="fa fa-user w3-padding" aria-hidden="true"></i> Name </label>
+            <input class="w3-input " type="text" name="Name" required>
+          </div>
+
+          <div  id="grad1" class="w3-section w3-text-white">    
+            <label> <i class="fa fa-envelope-o w3-padding" aria-hidden="true"></i> Name </label>
+            <input class="w3-input" type="text" name="Email" required>
+          </div>
+
+          <div  id="grad1" class="w3-section scroll w3-scroll w3-text-white">     
+            <label><i class="fa fa-pencil w3-padding" aria-hidden="true"></i> Message</label>
+            <input class="w3-input" type="text" name="Message" required>
+          </div> 
+
+          <input class="w3-check" type="checkbox" checked name="Like">
+          <label>I Like it!</label>
+          <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+
+          </form>
+    </div>
+  </div>
 </div>
 
 <div id="googleMap" style="width:100%;height:420px;"></div>
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"> </i>To the top</a>
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -544,23 +374,9 @@ body, html {
  
 <!-- Add Google Maps -->
 <script>
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-function mySmallCaps() {
-    alert(document.getElementById("SC").style.fontVariant);
-}
-
-
 function myMap()
 {
-  myCenter=new google.maps.LatLng(51.628579,-0.748687 );
+  myCenter=new google.maps.LatLng(51.628680, -0.748779);
   var mapOptions= {
     center:myCenter,
     zoom:12, scrollwheel: false, draggable: false,
@@ -571,6 +387,13 @@ function myMap()
     position: myCenter,
   });
   marker.setMap(map);
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
@@ -602,9 +425,5 @@ function toggleFunction() {
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 </body>
 </html>
