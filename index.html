@@ -67,20 +67,20 @@ body, html {
     background-size: cover;}
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("/Images/1white.jpg");
-    min-height: 100%;}
+    background-image: url("/Images/purewhite.png");
+    min-height:100%;}
 /* Second image (coffees) */
 .bgimg-2 {
-    background-image: url("/Images/2.jpg");
-    min-height: 400px;}
+    background-image: url("/Images/DSC01430.JPG");
+    min-height:400px;}
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("/Images/3.jpg");
-    min-height: 400px;}
-
+    background-image: url("/Images/DSC01430.JPG");
+    min-height:400px;}
+/* First image (Logo. Full height) */
 .bgimg-4 {
     background-image: url("/Images/purewhite.png");
-    min-height: 720px;}
+    min-height:400px;}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -104,10 +104,12 @@ body, html {
         <a href="#" class=" w3-right w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     <a href="#home" class=" w3-left w3-bar-item w3-button">TWO H </a>
-    <a href="#about" class=" w3-right  w3-bar-item w3-button w3-hide-small">ABOUT US</a>
-    <a href="#portfolio" class="w3-right w3-bar-item w3-button w3-hide-small">COFFEE'S</a>
-    <a href="#contact" class=" w3-right w3-bar-item w3-button w3-hide-small"> CONTACT US </a>
 
+<div class="w3-right">
+    <a href="#about" class="   w3-bar-item w3-button w3-hide-small">ABOUT US</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">COFFEE'S </a>
+   <a href="#contact" class=" w3-bar-item w3-button w3-hide-small"> CONTACT US </a>
+</div>
     </a>
   </div>
 
@@ -116,12 +118,11 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT US</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT US</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text   w3-hover-opacity    -->
-<div class="bgimg-4 w3-display-container" id="home">
+<div class="bgimg-1 w3-display-container" id="home">
       <div class="w3-display-middle" > <!-- style="white-space:nowrap;"> -->
         <div >
          <img src="/Images/Logo.png" style="width:350px"> 
@@ -144,12 +145,12 @@ body, html {
   <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to see what we can do for you. 
   </p>
 
-<br>
+  <br>
 
     <button onclick="myFunction1('D1')" class="w3-button w3-block w3-hover-light-blue w3-black w3-center">  WHOLESALE </button>
           <div id="D1" class="w3-container w3-hide w3-animate-opacity ">  <!-- w3-leftbar w3-sand  -->
-<!--           <p><b>Quallity, consistant, coffee that your buisness can depend on</b></p> -->
-          <p class="w3-center"> <h3>  Quallity, consistant, coffee that your shop can depend on </h3> </p> 
+  <!--           <p><b>Quallity, consistant, coffee that your buisness can depend on</b></p> -->
+          <span class="w3-center"> <h4> <i> Quallity, consistant, coffee that your shop can depend on</i> </h4> </span> 
 
           <p> Suppling coffee for cafes, bars and restarunts is our core business, and its one that we know and do well. The owners of Two H started their coffee journies making espressos for and running speciallity coffee shops, and have a combied 10 years of experience in that trade. </p>
          
@@ -162,7 +163,7 @@ body, html {
 
        <button onclick="myFunction1('D2')" class=" w3-button w3-block w3-dark-grey w3-hover-light-blue w3-center">HOME</button>
           <div id="D2" class=" w3-container w3-hide w3-animate-opacity ">
-          <p>Something special for your kitchen cupboard</p>
+          <span class="w3-center"> <h4> <i> Something special for the kitchen cupboard </i> </h4> </span> 
 
           <p> We know how important that morning brew is so all our coffee's are available in smaller bags for kitchen cupboards up and down the country. We also offer a contiunously changing small batch coffee, along side our espresso & decaf coffee, giving the home enthusiast the abillity to experence single origin coffees from all over the world. 
           </p>
@@ -171,7 +172,9 @@ body, html {
 
             <button onclick="myFunction1('D3')" class="w3-button w3-block w3-grey  w3-hover-light-blue w3-center"> COLLABORATIONS</button>
                 <div id="D3" class="   w3-container w3-hide w3-animate-opacity ">
-                <p>unique and exciting coffees </p>
+
+                <span class="w3-center"> <h4> <i> Truly uniquie coffees to make your shop or project stand out </i> </h4> </span> 
+
                   <p> Although its true to say all our customers are fellow collaborators sometimes we are approchaed with a unique and exciting ideas that need a personal touch. Where we work together with our clients to create unique coffee's and branding for their projetcs, bit more info here. ask olly about wording blablabla.
                   There are some examples of this in our gallery section.
                   </p>
@@ -179,13 +182,14 @@ body, html {
 
                 <button onclick="myFunction1('D4')" class=" w3-button w3-block w3-light-grey  w3-hover-light-blue w3-center " > PROMISES</button>
                       <div id="D4" class="  w3-container w3-hide w3-animate-opacity ">
-                <p> The important bit </p>
+
+                <span class="w3-center"> <h4> <i> The important bit </i> </h4> </span> 
 
                       <p>When we started roasting coffee we decided that we would opporate in a way that which we would could be genuinely proud of. What does this mean for you ?</p>
 
                       <li> Every bag of coffee that leaves the roastery will be same the the one before it, delsious and of fair & reasonable price.</li>
                       <li> All customers, reguardless of order size, will be treated the same, In a personable and respectful mannor. </li>
-                      <li>   something else here. </li>
+                      <li> something else here. </li>
                     </div>
 
                       <br>
@@ -193,9 +197,9 @@ body, html {
 </div> 
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">COFFEE</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">COFFEE </span>
   </div>
 </div>
 
@@ -223,7 +227,7 @@ body, html {
         <li class="w3-theme-l2 w3-g1">
           <p class="w3-xlarge"> Seasonal Espresso </p>
         </li>  
-          <img src="/Images/1.jpg" style="width:100%">
+          <img src="/Images/espresso.jpg" style="width:100%">
           <p> El Classico</p>
           <!--   <p class="w3-padding-16 w3-center "> <b>EL classico </b> </p> -->
              <button onclick="myFunction1('D32')" class="w3-button w3-block  w3-light-grey w3-hover-light-blue w3-center"> Provenance & Tasting </button>
@@ -279,7 +283,7 @@ body, html {
         <li class=" w3-y1 w3-theme-l2">
           <p class="w3-xlarge">Seasonal Decaf Espresso </p>
         </li>           
-          <img src="/Images/1.jpg" style="width:100%">
+          <img src="/Images/decaf.jpg" style="width:100%">
            <p > El Decaffico</p>
             <!-- <li class="w3-padding-16 w3-center  "><b>EL decaffico </b> </li> -->
              <button onclick="myFunction1('D34')" class="w3-button w3-light-grey w3-block w3-hover-light-blue w3-center">Provenance & Tasting</button>
@@ -335,7 +339,7 @@ body, html {
         <li class=" w3-r1  w3-theme-l2">
           <p class="w3-xlarge"> Limited Edition</p>
         </li>           
-          <img src="/Images/1.jpg" style="width:100%">
+          <img src="/Images/limited.jpg" style="width:100%">
             <p> Special Brew</p>
              <button onclick="myFunction1('D36')" class="w3-button  w3-light-grey w3-block w3-hover-light-blue w3-center"> Provenance & Tasting</button>
                   <div id="D36" class="   w3-container w3-hide  w3-animate-opacity ">
@@ -394,6 +398,8 @@ body, html {
   </div>
 </div>
 
+
+
 <div class="w3-mobile w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">Behind the scenes </h3>
   <p class="w3-center"> <em>click to enlarge and know a bit more about whats going on </em></p>
@@ -433,7 +439,6 @@ body, html {
     <div class="w3-col m3 w3-panel">
       <img src="/Images/3.jpg"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="BLA BLA VLA">
     </div>
-
   </div>
 </div>
 
@@ -454,7 +459,7 @@ body, html {
 
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
