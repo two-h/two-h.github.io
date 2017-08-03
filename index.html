@@ -629,7 +629,7 @@ function openCity(evt, cityName) {
   }
   var activebtn = document.getElementsByClassName("testbtn");
   for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" ", " w3-red");
+      activebtn[i].className = activebtn[i].className.replace("w3-red", " ");
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " ";
