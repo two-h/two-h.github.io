@@ -162,10 +162,10 @@ body, html {
 </div> 
         <div class="w3-border w3-content">
           <div class="w3-bar w3-theme">
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evt,'wholeSale')">London</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evt,'retail')">Paris</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evt,'collab')">Tokyo</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evt,'promises')">Tokyo</button>
+            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'wholeSale')">London</button>
+            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'retail')">Paris</button>
+            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'collab')">Tokyo</button>
+            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'promises')">Tokyo</button>
           </div>
 
           <div id="wholeSale" class="w3-container evtt w3-animate-opacity">
@@ -604,7 +604,7 @@ function toggleFunction() {
 }
 
 // Tabs
-function openEvt(evt,Name) {
+function openEvt(evtt,Name) {
   var i;
   var x = document.getElementsByClassName("evtt");
   for (i = 0; i < x.length; i++) {
