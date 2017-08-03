@@ -184,7 +184,7 @@ body, html {
             <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
           </div>
         </div>
-        
+
 </div> 
 
 
@@ -593,6 +593,23 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
 <!--
