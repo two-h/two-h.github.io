@@ -160,40 +160,32 @@ body, html {
   <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to see what we can do for you. 
   </p>
 </div> 
-        <div class="w3-border w3-content">
-          <div class="w3-bar w3-theme">
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'wholeSale')">London</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'retail')">Paris</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'collab')">Tokyo</button>
-            <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openEvt(evtt,'promises')">Tokyo</button>
-          </div>
 
-          <div id="wholeSale" class="w3-container evtt w3-animate-opacity">
-            <h2>London</h2>
-            <p>London is the capital city of England.</p>
-            <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-          </div>
+<div class="w3-border">
+      <div class="w3-bar w3-theme">
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">London</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">Paris</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">Tokyo</button>
+      </div>
 
-          <div id="retail" class="w3-container evtt w3-animate-opacity">
-            <h2>Paris</h2>
-            <p>Paris is the capital of France.</p> 
-            <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-          </div>
+      <div id="London" class="w3-container city w3-animate-opacity">
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+      </div>
 
-          <div id="collab" class="w3-container evtt w3-animate-opacity">
-            <h2>Tokyo</h2>
-            <p>Tokyo is the capital of Japan.</p>
-            <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-          </div>
+      <div id="Paris" class="w3-container city w3-animate-opacity">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p> 
+        <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+      </div>
 
-          <div id="promises" class="w3-container evtt w3-animate-opacity">
-            <h2>Tokyo</h2>
-            <p>Tokyo is the capital of Japan.</p>
-            <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-          </div>
-
-        </div> <br>
-
+      <div id="Tokyo" class="w3-container city w3-animate-opacity">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+      </div>
+</div>
 
 
 
@@ -604,9 +596,10 @@ function toggleFunction() {
 }
 
 // Tabs
-function openEvt(evtt,Name) {
+// Tabs
+function openCity(evt, cityName) {
   var i;
-  var x = document.getElementsByClassName("evtt");
+  var x = document.getElementsByClassName("city");
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
@@ -620,6 +613,8 @@ function openEvt(evtt,Name) {
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
 mybtn.click();
+
+
 
 
 </script>
