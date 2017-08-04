@@ -363,18 +363,25 @@ body, html {
         </li>           
           <img src="/Images/limited.jpg" style="width:100%">
             <p> Special Brew</p>
-             <button onclick="myFunction1('D36')" class="w3-button  w3-light-grey w3-block w3-hover-light-blue w3-center"> Provenance & Tasting</button>
-                  <div id="D36" class="   w3-container w3-hide  w3-animate-opacity ">
-                  <ul style="list-style-type:none; margin:0; padding: 0;">
+
+            <div class="w3-row ">
+                  <button class="w3-row-item w3-quarter w3-black w3-hover-light-blue w3-button testbtn w3-padding-16" onclick="openCity(event,'taste3')"><b>Provenance & Tasting</b> </button>
+
+                  <button class="w3-row-item w3-quarter w3-dark-grey w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'price3')"><b>Pricing</b></button>
+          
+          </div>
+
+          <div id="taste3" class="w3-container  city w3-animate-opacity">
+                      <ul style="list-style-type:none; margin:0; padding: 0;">
                       <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
                       <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
                       <li > <b> Process </b> <br> Pupled Natural & Washed </li>
                       <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                    </ul> 
-                  </div>
-                     <button onclick="myFunction1('D37')" class="w3-button w3-dark-grey w3-block w3-hover-light-blue w3-center"> Pricing </button>
-                        <div id="D37" class="w3-container w3-hide w3-animate-opacity ">
-                        <br>
+                      </ul> 
+          </div>
+
+          <div id="price3" class="w3-container  city w3-animate-opacity">
+                                                           <br>
                               <h4> 1 Kilogram Bags </h4>
                               <table class="w3-table w3-striped w3-small w3-border">
                                 <tr>
@@ -407,7 +414,8 @@ body, html {
                                 </tr>
                               </table>
                               <br>
-                        </div>
+
+          </div>
       </ul>
     </div>
 <!-- end of coffee drop downs -->
