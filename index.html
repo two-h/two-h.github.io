@@ -393,14 +393,14 @@ document.getElementById("myLink").click();
 // ================================================================================ Tabs 2
 // Tabbed Menu
 function openMenu2(evt2, menuName2) {
-  var i, x, tablinks;
+  var i, x, tablinks2;
   x = document.getElementsByClassName("menu2");
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablink2");
+  tablinks2 = document.getElementsByClassName("tablink2");
   for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+     tablinks[i].className = tablinks2[i].className.replace(" w3-red", "");
   }
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-red";
