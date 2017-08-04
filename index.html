@@ -165,20 +165,20 @@ body, html {
     <div class="w3-card">
 
           <div class="w3-row ">
-            <button class="w3-row-item w3-quarter w3-hover-light-blue w3-button testbtn w3-padding-16" onclick="openCity(event,'London')"><b>Who Are We</b> </button>
-            <button class="w3-row-item w3-quarter w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')"><b>Wholesale</b></button>
-            <button class="w3-row-item w3-quarter w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')"><b>Retail</b></button>
-            <button class="w3-row-item w3-quarter w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyoii')"><b>Collaborations</b></button>            
+            <button class="w3-row-item w3-quarter w3-black w3-hover-light-blue w3-button testbtn w3-padding-16" onclick="openCity(event,'London')"><b>Who Are We</b> </button>
+            <button class="w3-row-item w3-quarter w3-dark-grey w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')"><b>Wholesale</b></button>
+            <button class="w3-row-item w3-quarter w3-grey w3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')"><b>Retail</b></button>
+            <button class="w3-row-item w3-quarter w3-light-greyw3-hover-light-blue  w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyoii')"><b>Collaborations</b></button>            
           </div>
 
-          <div id="London" class="w3-container w3-light-grey city w3-animate-opacity"><br>
-                    
+          <div id="London" class="w3-container  city w3-animate-opacity"><br>
+
                   <i>A little about us</i> 
 
                   <p>Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
           </div>
 
-          <div id="Paris" class="w3-container w3-light-grey  city w3-animate-opacity"><br>
+          <div id="Paris" class="w3-container  city w3-animate-opacity"><br>
 
                 <i> Quallity, consistant, coffee that your shop can depend on</i> 
 
@@ -192,7 +192,7 @@ body, html {
 
           </div>
 
-          <div id="Tokyo" class="w3-container w3-light-grey city w3-animate-opacity"><br>
+          <div id="Tokyo" class="w3-container  city w3-animate-opacity"><br>
 
              <i> Something special for the kitchen cupboard </i>
 
@@ -200,7 +200,7 @@ body, html {
 
           </div>
 
-          <div id="Tokyoii" class="w3-container w3-light-grey city w3-animate-opacity"><br>
+          <div id="Tokyoii" class="w3-container city w3-animate-opacity"><br>
 
             <i> Truly uniquie coffees to make your shop or project stand out </i>
 
@@ -621,10 +621,10 @@ function openCity(evt, cityName) {
   }
   var activebtn = document.getElementsByClassName("testbtn");
   for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" w3-light-grey", "");
+      activebtn[i].className = activebtn[i].className.replace(" w3-light-blue", "");
   }
   document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-light-grey";
+  evt.currentTarget.className += " w3-light-blue";
 }
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
