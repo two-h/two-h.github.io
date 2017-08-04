@@ -346,74 +346,74 @@ body, html {
 <!-- ================================================================================ FOOTER END ===================   ======   --> 
 
 <script>
-// // =================================================================================== MAP 
-// function myMap()
-// {
-//   myCenter=new google.maps.LatLng(51.628579,-0.748687 );
-//   var mapOptions= {
-//     center:myCenter,
-//     zoom:12, scrollwheel: false, draggable: false,
-//     mapTypeId:google.maps.MapTypeId.ROADMAP
-//   };
-//   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-//   var marker = new google.maps.Marker({
-//     position: myCenter,
-//   });
-//   marker.setMap(map);
-// }
+// =================================================================================== MAP 
+function myMap()
+{
+  myCenter=new google.maps.LatLng(51.628579,-0.748687 );
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
 
-//================================================================================== Change style of navbar on scroll
-// window.onscroll = function() {myFunction()};
-// function myFunction() {
-//     var navbar = document.getElementById("myNavbar");
-//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//         navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-//     } else {
-//         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-//     }
-// }
+// ================================================================================== Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
 
 // ============================================ Used to toggle the menu on small screens when clicking on the menu button
-// function toggleFunction() {
-//     var x = document.getElementById("navDemo");
-//     if (x.className.indexOf("w3-show") == -1) {
-//         x.className += " w3-show";
-//     } else {
-//         x.className = x.className.replace(" w3-show", "");
-//     }
-// }
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 
 // ================================================================================ Tabs 1
-// // Tabbed Menu
-// function openMenu(evt, menuName) {
-//   var i, x, tablinks;
-//   x = document.getElementsByClassName("menu");
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";
-//   }
-//   tablinks = document.getElementsByClassName("tablink");
-//   for (i = 0; i < x.length; i++) {
-//      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-//   }
-//   document.getElementById(menuName).style.display = "block";
-//   evt.currentTarget.firstElementChild.className += " w3-red";
-// }
-// document.getElementById("myLink").click();
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
 // // ================================================================================ Tabs 2
-// // Tabbed Menu
-// function openMenu2(evt, menuName) {
-//   var i, x, tablinks2;
-//   x = document.getElementsByClassName("menu2");
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";
-//   }
-//   tablinks2 = document.getElementsByClassName("tablink2");
-//   for (i = 0; i < x.length; i++) {
-//      tablinks2[i].className = tablinks2[i].className.replace(" w3-red", "");
-//   }
-//   document.getElementById(menuName).style.display = "block";
-//   evt.currentTarget.firstElementChild.className += " w3-red";
-// }
+// Tabbed Menu
+function openMenu2(evt, menuName) {
+  var i, x, tablinks2;
+  x = document.getElementsByClassName("menu2");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablink2");
+  for (i = 0; i < x.length; i++) {
+     tablinks2[i].className = tablinks2[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
 // document.getElementById("myLink2").click();
 // // ================================================================================ Tabs 3
 // // Tabbed Menu
@@ -433,14 +433,14 @@ body, html {
 // document.getElementById("myLink3").click();
 
 // // ================================================================================ Drop accordions
-//         function myFunction1(id) {
-//             var x = document.getElementById(id);
-//             if (x.className.indexOf("w3-show") == -1) {
-//                 x.className += " w3-show";
-//             } else { 
-//                 x.className = x.className.replace(" w3-show", "");
-//             }
-//         }
+        function myFunction1(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
 // =============================================================================    Slideshow Images
 var slideIndex = 1;
 showDivs(slideIndex);
