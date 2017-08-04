@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <style>
-.mySlides {display:none}
-
 div.scroll
 
 {
@@ -65,7 +63,7 @@ body, html {
     }
 }
 
-
+.mySlides {display:none}
 
 </style>
 
@@ -218,8 +216,9 @@ body, html {
 
 <!-- ================================================================================ GALLERY ==================    ======   -->
 <!-- <div class="w3-content w3-padding-64" id="gallery"></div> -->
-  <div class="w3-container" id="apartment">
+ <div class="w3-container" id="apartment">
     <h2 class="w3-text-green">The Apartment</h2>
+
     <div class="w3-display-container mySlides">
     <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
@@ -259,6 +258,8 @@ body, html {
       <img class="demo w3-opacity w3-hover-opacity-off" src="/Images/DSC01567.JPG" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
     </div>
   </div>
+
+  
 
 <!-- ================================================================================ GALLERY END ===============    ======   -->
 
@@ -362,7 +363,7 @@ function myMap()
   marker.setMap(map);
 }
 
-// ================================================================================== Change style of navbar on scroll
+//================================================================================== Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
@@ -399,7 +400,7 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-red";
 }
 document.getElementById("myLink").click();
-// // ================================================================================ Tabs 2
+// ================================================================================ Tabs 2
 // Tabbed Menu
 function openMenu2(evt, menuName) {
   var i, x, tablinks2;
@@ -414,25 +415,25 @@ function openMenu2(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-red";
 }
-// document.getElementById("myLink2").click();
-// // ================================================================================ Tabs 3
-// // Tabbed Menu
-// function openMenu3(evt, menuName) {
-//   var i, x, tablinks3;
-//   x = document.getElementsByClassName("menu3");
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";
-//   }
-//   tablinks3 = document.getElementsByClassName("tablink3");
-//   for (i = 0; i < x.length; i++) {
-//      tablinks3[i].className = tablinks3[i].className.replace(" w3-red", "");
-//   }
-//   document.getElementById(menuName).style.display = "block";
-//   evt.currentTarget.firstElementChild.className += " w3-red";
-// }
-// document.getElementById("myLink3").click();
+document.getElementById("myLink2").click();
+// ================================================================================ Tabs 3
+// Tabbed Menu
+function openMenu3(evt, menuName) {
+  var i, x, tablinks3;
+  x = document.getElementsByClassName("menu3");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks3 = document.getElementsByClassName("tablink3");
+  for (i = 0; i < x.length; i++) {
+     tablinks3[i].className = tablinks3[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink3").click();
 
-// // ================================================================================ Drop accordions
+// ================================================================================ Drop accordions
         function myFunction1(id) {
             var x = document.getElementById(id);
             if (x.className.indexOf("w3-show") == -1) {
@@ -442,6 +443,7 @@ function openMenu2(evt, menuName) {
             }
         }
 // =============================================================================    Slideshow Images
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -468,6 +470,8 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-opacity-off";
 }
+
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
 <!--
