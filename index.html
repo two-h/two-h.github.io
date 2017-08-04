@@ -215,10 +215,9 @@ body, html {
 <!-- ================================================================================ THIRD PARALAX IN ACTION       ======   -->
 
 <!-- ================================================================================ GALLERY ==================    ======   -->
-<!-- <div class="w3-content w3-padding-64" id="gallery"></div> -->
- <div class="w3-container" id="apartment">
-    <h2 class="w3-text-green">The Apartment</h2>
+ <div class="w3-content w3-container w3-padding-64" id="gallery"> "> 
 
+ <div class="w3-container" >
     <div class="w3-display-container mySlides">
     <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
@@ -345,7 +344,6 @@ body, html {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div> </footer>
 <!-- ================================================================================ FOOTER END ===================   ======   --> 
-
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -373,8 +371,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-opacity-off";
 }
-
-
 // =================================================================================== MAP 
 function myMap()
 {
@@ -390,7 +386,6 @@ function myMap()
   });
   marker.setMap(map);
 }
-
 //================================================================================== Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -401,7 +396,6 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
     }
 }
-
 // ============================================ Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
@@ -411,7 +405,6 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
 // ================================================================================ Tabs 1
 // Tabbed Menu
 function openMenu(evt, menuName) {
