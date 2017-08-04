@@ -217,7 +217,7 @@ body, html {
 <!-- ================================================================================ GALLERY ==================    ======   -->
 <!-- <div class="w3-content w3-padding-64" id="gallery"></div> -->
  <div class="w3-container" id="apartment">
-    <h2 class="w3-text-green">The Apartment</h2>
+    <h2 class="w3-text-green">The Ap     ddddartment</h2>
 
     <div class="w3-display-container mySlides">
     <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
@@ -443,7 +443,7 @@ document.getElementById("myLink3").click();
             }
         }
 // =============================================================================    Slideshow Images
-
+// Slideshow Apartment Images
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -457,17 +457,17 @@ function currentDiv(n) {
 
 function showDivs(n) {
   var i;
-  var x1 = document.getElementsByClassName("mySlides");
+  var x = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
-  if (n > x.length1) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length1}
-  for (i = 0; i < x.length1; i++) {
-     x1[i].style.display = "none";
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
   }
-  x1[slideIndex-1].style.display = "block";
+  x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-opacity-off";
 }
 
