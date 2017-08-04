@@ -406,6 +406,22 @@ function openMenu2(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-red";
 }
 document.getElementById("myLink2").click();
+// ================================================================================ Tabs 3
+// Tabbed Menu
+function openMenu3(evt, menuName) {
+  var i, x, tablinks3;
+  x = document.getElementsByClassName("menu3");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks3 = document.getElementsByClassName("tablink3");
+  for (i = 0; i < x.length; i++) {
+     tablinks3[i].className = tablinks3[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink3").click();
 
 // ================================================================================ Drop accordions
         function myFunction1(id) {
