@@ -64,7 +64,6 @@ body, html {
 }
 
 .mySlides {display:none}
-.demo {cursor:pointer}
 
 </style>
 
@@ -216,10 +215,8 @@ body, html {
 <!-- ================================================================================ THIRD PARALAX IN ACTION       ======   -->
 
 <!-- ================================================================================ GALLERY ==================    ======   -->
-<div class="w3-content w3-padding-64" id="gallery">
-<h3>hhhuuu</h3>
-  <!-- Slideshow Header -->
-  <div class="w3-container" id="apartment">
+<!-- <div class="w3-content w3-padding-64" id="gallery"></div> -->
+ <div class="w3-container" id="apartment">
     <h2 class="w3-text-green">The Apartment</h2>
     <div class="w3-display-container mySlides">
     <img src="/w3images/livingroom.jpg" style="width:100%;margin-bottom:-6px">
@@ -246,7 +243,6 @@ body, html {
       </div>
     </div>
   </div>
-  
   <div class="w3-row-padding w3-section">
     <div class="w3-col s3">
       <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
@@ -261,8 +257,6 @@ body, html {
       <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
     </div>
   </div>
-</div>
-
 
   
 
@@ -448,7 +442,7 @@ document.getElementById("myLink3").click();
             }
         }
 // =============================================================================    Slideshow Images
-// Slideshow Apartment Images
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
