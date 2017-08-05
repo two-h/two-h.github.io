@@ -73,19 +73,56 @@ body {
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:80px"></div>
 
-  <div class="bgimg-1 w3-display-container" id="home">
-      <div class="w3-display-middle" > <!-- style="white-space:nowrap;"> -->
-        <div >
-         <img src="/Images/Logo.png" style="width:350px"> 
-        </div>
-      </div>
-  </div>
-  
   <div class="bgimg-2 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
        <span class="w3-xxlarge w3-text-white w3-wide">OUR BUSINESS</span>
     </div>
   </div>
+  <div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">OUR BUSINESS </h3>
+     
+      <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to learn a little about us and see what we can do for you. 
+      </p>
+
+  <div class="w3-content w3-card">
+  
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starterr');">
+        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Starterr</div>
+      </a>
+
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+    <p>A little about us
+      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+    <p>A little abouskjbsbhshshhhhhhhhht us
+      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
+    </div>
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+    <p>A little aboutp'n'ob;oub;ogu us
+      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
+    </div>
+
+    <div id="Starterr" class="w3-container menu w3-padding-32 w3-white">
+    <p>A little aboutp'n'ob;oub;ogu us
+      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
+    </div><br>
+
+  </div></div>   
 
 
   <!-- Contact -->
@@ -120,6 +157,21 @@ body {
 </div>
 
 <script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
 // Script to open and close sidebar when on tablets and phones
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
