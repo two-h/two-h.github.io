@@ -1,244 +1,69 @@
+<!DOCTYPE html>
 <html>
-<title>Two H | Coffee Roasters</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./w3lib.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-div.scroll
-
-{
-overflow:scroll;
-}
-body,h1,h2,h3,h4,h5,h6,span {font-family: 'Playfair Display', serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;}
-
-.bgimg-5 {
-    background-attachment: fixed;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url("/Images/purewhite.png");
-    min-height:100%;}
-/* Second image (coffees) */
-.bgimg-2 {
-    background-image: url("/Images/DSC01567.JPG");
-    min-height:400px;}
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("/Images/DSC01468.JPG");
-    min-height:400px;}
-/* First image (Logo. Full height) */
-.bgimg-4 {
-    background-image: url("/Images/DSC01584.JPG");
-    min-height:400px;}
-
-.bgimg-5 {
-    background-image: url("/Images/DSC01346.JPG");
-    min-height:400px;}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-        background-attachment: scroll;
-    }
-}
-
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 .mySlides {display:none}
-
 </style>
+<body class="w3-content w3-border-left w3-border-right">
 
-<body >
-
-<!--=========================================================================================   NAVIGATION==============   -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-        <a href="#" class=" w3-right w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-          <i class="fa fa-search"></i>
-        <a href="#home" class=" w3-left w3-bar-item w3-button">TWO H </a>
-
-      <div class="w3-right">
-          <a href="#about" class="   w3-bar-item w3-button w3-hide-small">ABOUT US</a>
-          <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">COFFEE'S </a>
-         <a href="#contact" class=" w3-bar-item w3-button w3-hide-small"> CONTACT US </a>
-      </div>
-    </a> </div>
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT US</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">COFFEE'S</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT US</a> </div>
-</div>
-<!--=========================================================================================   NAVIGATION END =========   -->
-
-<!--==================================================================================LOGO LANDING PAGE ==============   -->
-<div class="bgimg-1 w3-display-container" id="home">
-      <div class="w3-display-middle" > <!-- style="white-space:nowrap;"> -->
-        <div >
-         <img src="/Images/Logo.png" style="width:350px"> 
-        </div>
-      </div>
-</div>
-<!--==================================================================================LOGO LANDING PAGE END ===========   -->
-
-<!-- =================================================================================FIRST PARALAX OUR BUISNESS ======   -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">OUR BUSINESS</span>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>TWO H</h3>
+    <h3>Coffee Roasters</h3>
   </div>
-</div>
-<!-- =================================================================================FIRST PARALAX OUR BUISNESS END ==   -->
+  <div class="w3-bar-block">
+    <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Our Buisness</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Our coffees </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
+</nav>
 
-<!-- =================================================================================OUR BUISNESS ================= ==   -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">OUR BUSINESS </h3>
-     
-      <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to learn a little about us and see what we can do for you. 
-      </p>
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item">Rental</span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
 
-  <div class="w3-content w3-card">
-  
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Pizza</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Salads</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Starter</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starterr');">
-        <div class="w3-row-item w3-quarter tablink w3-padding-large w3-hover-red">Starterr</div>
-      </a>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
 
-    </div>
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
 
-    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-    <p>A little about us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div>
-
-    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
-    <p>A little abouskjbsbhshshhhhhhhhht us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div>
-
-    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-    <p>A little aboutp'n'ob;oub;ogu us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div>
-
-    <div id="Starterr" class="w3-container menu w3-padding-32 w3-white">
-    <p>A little aboutp'n'ob;oub;ogu us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div><br>
-
-  </div></div> 
-<!--  =====================================================================================OUR BUISNESS END ============  -->
-
-<!-- ================================================================================ SECOND PARALAX OUR COFFEE ======   -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">COFFEE'S </span>
-  </div> </div>
-<!-- ================================================================================ SECOND PARALAX OUR COFEEE END ==   -->
-
-<!-- ================================================================================ OUR COFEEE =====================   -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">OUR BUSINESS</h3>
-     
-      <p> Hello friends, welcome to our website. We are <b> Two H </b>, a Coffee Roasting company. Selecting, roasting and sending out delisious coffees for our fellow coffee lovers is what we do. Over the next few pages we hope to show you how we like to do things: With Passion, Simply , Honestly and Friendly. Explore the below tabs to learn a little about us and see what we can do for you. 
-      </p>
-
-  <div class="w3-content w3-card">
-  
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu2(event, 'Pizza1');" id="myLink2">
-        <div class="w3-col s4 tablink2 w3-padding-large w3-hover-red">Pizza</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu2(event, 'Pasta1');">
-        <div class="w3-col s4 tablink2 w3-padding-large w3-hover-red">Salads</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu2(event, 'Starter1');">
-        <div class="w3-col s4 tablink2 w3-padding-large w3-hover-red">Starter</div>
-      </a>
-    </div>
-
-    <div id="Pizza1" class="w3-container menu2 w3-padding-32 w3-white">
-    <p>A little about usqqq fuqqqqqqqqq
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div>
-
-    <div id="Pasta1" class="w3-container menu2 w3-padding-32 w3-white">
-    <p>A little abouskjbsbhshshhhhhhhhht us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div>
-
-
-    <div id="Starter1" class="w3-container menu2 w3-padding-32 w3-white">
-    <p>A little aboutp'n'ob;oub;ogu us
-      Etiam accumsan dui turpis, et pharetra purus varius ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in mollis turpis. Morbi mollis lectus arcu, non pharetra nisl vulputate at. Aliquam erat volutpat. Aliquam quis ante eu neque cursus cursus quis eget neque. Proin tortor orci, consectetur vitae iaculis vel, fringilla mollis nulla. Pellentesque vitae lectus sem. Curabitur odio ipsum, eleifend quis metus a, luctus tristique ex. Fusce in sem neque.</p>
-    </div><br>
-
-  </div></div> 
-<!-- ================================================================================ OUR COFEEE END  ===================   -->
-
-<!-- ================================================================================ THIRD PARALAX IN ACTION      ======   -->
-<div class="bgimg-4 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">US IN ACTION </span>
-  </div> </div>
-<!-- ================================================================================ THIRD PARALAX IN ACTION       ======   -->
-
-<!-- ================================================================================ GALLERY ==================    ======   -->
- <div class="w3-content w3-container w3-padding-64" id="gallery"> 
-   <h3 class="w3-center">Behind The Scenes </h3>
-<div style="height:35%;" >
- <div class="w3-container" >
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="apartment">
+    <h2 class="w3-text-green">The Apartment</h2>
     <div class="w3-display-container mySlides">
-    <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
+    <img src="/w3images/livingroom.jpg" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
         <p>Living Room</p>
       </div>
     </div>
     <div class="w3-display-container mySlides">
-    <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
+    <img src="/w3images/diningroom.jpg" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
         <p>Dining Room</p>
       </div>
     </div>
     <div class="w3-display-container mySlides">
-    <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
+    <img src="/w3images/bedroom.jpg" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
         <p>Bedroom</p>
       </div>
     </div>
     <div class="w3-display-container mySlides">
-    <img src="/Images/DSC01567.JPG" style="width:100%;margin-bottom:-6px">
+    <img src="/w3images/livingroom2.jpg" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
         <p>Living Room II</p>
       </div>
@@ -246,107 +71,107 @@ body, html {
   </div>
   <div class="w3-row-padding w3-section">
     <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="/Images/DSC01567.JPG" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
     </div>
     <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="/Images/DSC01567.JPG" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/diningroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
     </div>
     <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="/Images/DSC01567.JPG" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/bedroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
     </div>
     <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="/Images/DSC01567.JPG"  style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
     </div>
   </div>
+
+  <div class="w3-container">
+    <h4><strong>The space</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Amenities</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+        <p><i class="fa fa-fw fa-tv"></i> TV</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+        <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+        <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Extra Info</strong></h4>
+    <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    <hr>
+    
+    <h4><strong>Rules</strong></h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Subscribe to receive updates on available dates and special offers.</p>
+    <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Subscribe</button></p>
+  </div>
+  <hr>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact">
+    <h2>Contact</h2>
+    <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+    <p>Questions? Go ahead, ask them:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+    <button type="submit" class="w3-button w3-green w3-third">Send a Message</button>
+    </form>
+  </div>
+  
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
   </div>
 </div>
-  
 
-<!-- ================================================================================ GALLERY END ===============    ======   -->
-
-<!-- ================================================================================ FOURTH PARALAX CONTACT         ======   -->
-<div class="bgimg-5 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div></div>
-<!-- ================================================================================ FOURTH PARALAX CONTACT END     ======   -->
-
-<!-- ================================================================================ CONTACT ====================   ======   -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">REACH US</h3>
-  <p class="w3-center"><em>By filling out this form</em></p>
-  </div>
-
-  <div class="w3-content">
-
-    <form class="w3-container w3-content w3-card-4 " action="/action_page.php" target="_blank">
-      
-        <div class="w3-margin-top">
-          <span class="w3-large w3-bottombar "> Id like to talk to Two H about </span>
-        </div>
-        <br>
-
-        <table>
-
-        <tr>
-          <td style="vertical-align:bottom;"> <label>Buying some coffee for my home</label> </td>
-          <td> &nbsp; </td>
-          <td><input id="Home" class="w3-radio " type="radio" name="Button" value="Retail" checked></td> 
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"><label>Buying some coffee for my shop</label></td>
-          <td> &nbsp; </td>
-          <td> <input id="Shop" class="w3-radio " type="radio" name="Button" value="WholeSale"></td>      
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"> <label> A collabrotive Idea</label></td>
-          <td> &nbsp; </td>
-          <td><input id="Colab" class="w3-radio " type="radio" name="Button" value="Colab" ></td> 
-        </tr>
-        <tr>
-          <td style="vertical-align:bottom;"><label>Something else</label></td>
-                    <td> &nbsp; </td>
-          <td  ><input id="Other" class="w3-radio" type="radio" name="Button" value="Other" align="top"></td>      
-        </tr>
-        </table>
-        <br>
-      <div class="w3-section">   
-        <label>Name</label>   
-        <input class="w3-input" type="text" required>
-      </div>
-
-       <div class="w3-section">  
-          <label>Email address  </label>    
-         <input class="w3-input" type="text" required>
-       </div>
-
-        <div class="w3-section">     
-          <label>Additional Comments </label>   
-          <input class="w3-input" type="text">
-        </div>
-
-      </form>
-       <br>
-     <br> </div>
-<!-- ================================================================================ CONTACT END =================   ======   -->     
-
-<!-- ================================================================================ MAP =========================   ======   -->
-<div id="googleMap" style="width:100%;height:420px;"></div>
-<!-- ================================================================================ MAP END  ====================   ======   -->
-
-<!-- ================================================================================ FOOTER    ====================   ======   -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"> </i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> </footer>
-<!-- ================================================================================ FOOTER END ===================   ======   --> 
 <script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -373,106 +198,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-opacity-off";
 }
-// =================================================================================== MAP 
-function myMap()
-{
-  myCenter=new google.maps.LatLng(51.628579,-0.748687 );
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-//================================================================================== Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-    }
-}
-// ============================================ Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-// ================================================================================ Tabs 1
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink").click();
-// ================================================================================ Tabs 2
-// Tabbed Menu
-function openMenu2(evt, menuName) {
-  var i, x, tablinks2;
-  x = document.getElementsByClassName("menu2");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks2 = document.getElementsByClassName("tablink2");
-  for (i = 0; i < x.length; i++) {
-     tablinks2[i].className = tablinks2[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink2").click();
-// ================================================================================ Tabs 3
-// Tabbed Menu
-function openMenu3(evt, menuName) {
-  var i, x, tablinks3;
-  x = document.getElementsByClassName("menu3");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks3 = document.getElementsByClassName("tablink3");
-  for (i = 0; i < x.length; i++) {
-     tablinks3[i].className = tablinks3[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink3").click();
-
-// ================================================================================ Drop accordions
-        function myFunction1(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else { 
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-// =============================================================================    Slideshow Images
-
-
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+
 </body>
 </html>
