@@ -56,6 +56,14 @@
   }
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
+
+  .bg-2 {
+      background: #4D775F;
+      color: #bdbdbd;
+  }
+  .bg-2 h3 {color: #fff;}
+  .bg-2 p {font-style: italic;}
+
   .list-group-item:first-child {
       border-top-right-radius: 0;
       border-top-left-radius: 0;
@@ -160,7 +168,7 @@
 
 /*panel shit */
 .panel {
-    border: 1px solid #2d2d30; 
+    border: 1px solid #4D775F; 
     border-radius:0;
     transition: box-shadow 0.5s;
 }
@@ -177,7 +185,7 @@
 
 .panel-heading {
     color: #fff !important;
-    background-color: #2d2d30 !important;
+    background-color: #4D775F !important;/* #2d2d30 */
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -201,7 +209,7 @@
 
 .panel-footer .btn {
     margin: 15px 0;
-    background-color: #2d2d30;
+    background-color: #4D775F;
     color: #fff;
 }
 
@@ -366,7 +374,7 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-default text-center">
-        <div class="panel-heading">
+        <div class="panel-heading bg-2">
           <h2>Espresso</h2>
         </div>
 
@@ -374,13 +382,13 @@
         <img src="/Images/DSC01584.JPG" style="width:100%">
         </div>
 
-        <div class="panel-footer"> <!-- put prcing and provonoce here -->  
+        <div class="panel-footer bg-2"> <!-- put prcing and provonoce here -->  
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="pill" href="#tasting1">Tasting</a></li>
                 <li><a data-toggle="pill" href="#pricing1">Pricing</a></li>
               </ul>
               
-              <div class="tab-content">
+              <div class="tab-content bg-2">
                 <div id="tasting1" class="tab-pane fade in active">
                    <ul style="list-style-type:none; margin:0; padding: 0;">
                       <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
