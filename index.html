@@ -12,6 +12,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
   body {
       font: 400 15px/1.8 PlayfairDisplay, serif;
       color: #777;
@@ -60,6 +88,25 @@
       padding: 3px;
 
   }
+
+  .bg-3 {
+      background-color: #B68BC4;
+      padding: 3px;
+
+  }
+  .bg-4 {
+      background-color: #BF7777 ;
+      padding: 3px;
+
+  }
+
+  .bg-5{
+      background-color: #E7CCCC  ;
+      padding: 3px;
+
+  }
+
+
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
   .list-group-item:first-child {
@@ -167,7 +214,7 @@
 .nav-pills>li.active>a, 
 .nav-pills>li.active>a:focus, 
 .nav-pills>li.active>a:hover {
-    background-color: #689389 ; 
+    background-color: #689389 ; /*dak shade for tab*/
 }
 .nav-pills a {
 color: #2d2d30;
@@ -179,16 +226,23 @@ color: #2d2d30;
     border-radius:0;
     transition: box-shadow 0.5s;
 }
+.panel2 {
+    border: 2px solid #B68BC4; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
+.panel3 {
+    border: 2px solid #BF7777; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
 
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 
-.panel-footer .btn:hover {
-    border: 1px solid #2d2d30 ; /*#8BC4B6;*/
-    background-color: #fff !important;
-    color: #f4511e;
-}
+
+
 
 .panel-heading {
     color: #fff !important;
@@ -205,17 +259,31 @@ color: #2d2d30;
     background-color: #D4E9E4 !important;
     color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
 }
+.panel-footer2 {
+    background-color: #E4D4E9 !important;/**/
+    color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
+}
+.panel-footer3 {
+    background-color: #E7CCCC  !important;/**/
+    color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
+}
 .panel-footer h3 {
+    font-size: 32px;
+}
+.panel-footer2 h3 {
     font-size: 32px;
 }
 .panel-footer h4 {
     color: #aaa;
     font-size: 14px;
 }
-.panel-footer .btn {
-    margin: 15px 0;
-    background-color: #f4511e;
-    color: #fff;
+.panel-footer2 h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+.panel-footer3 h4 {
+    color: #aaa;
+    font-size: 14px;
 }
 
 
@@ -329,8 +397,8 @@ color: #2d2d30;
 <!-- Container (TOUR Section) -->
 <div id="tour" class="bg-1" >
   <br>
-      <h3 class="text-center"><p>Our Buisness <p></h3>
-      <p class="text-center"><em>We got you covered!</em></p>
+      <h3 class="text-center "><p>Our Buisness <p></h3>
+      <p class="text-center  "><em>We got you covered!</em></p>
 
   <div class="container">
     <ul class="nav nav-tabs ">
@@ -366,8 +434,8 @@ color: #2d2d30;
 
 <div id="tour">
   <br>
-  <h3 class="text-center">OUR COFFEE</h3>
-  <p class="text-center"><em>We got you covered!</em></p>
+  <h3 class="text-center  ">OUR COFFEE</h3>
+  <p class="text-center slideanim "><em>We got you covered!</em></p>
   <div class="text-center container">
       <p>At Two H we believe in simplcity and offer three, carefully profiled, coffees fit for purpose. 
       Our Seasonal Espresso beans will always make, what we believe, everything an espresso coffee should be. 
@@ -375,40 +443,37 @@ color: #2d2d30;
       The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
       these beliefs. </p></div>
 
- <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4 slideanim ">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h2>Espresso</h2>
-        </div>
-
-        <div>
-        <img src="/Images/espresso.jpg" style="width:100%">
-        </div>
-
-       <!-- put prcing and provonoce here could use pre-scrollable here|"panel-footer"-->  
-
-     <div class="container-fluid bg-2" >
-        <ul class="nav nav-justified nav-pills bg-2"> <!--  -->
-              <li class="active"><a data-toggle="pill" href="#tasting1">TASTING</a></li>
-              <li ><a data-toggle="pill" href="#pricing1">PRICING</a></li>
-        </ul>
-     </div>   
- <div class="panel-footer"> 
-
-              <div class="tab-content">
-                <div id="tasting1" class="tab-pane fade in active">
-                   <ul style="list-style-type:none; margin:0; padding: 0;">
-                      <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                      <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                      <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                      <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                    </ul> 
-               </div>
-
+        <div class="row slideanim container-fluid">
+        <!-- first box  -->
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h2>Espresso</h2>
+              </div>
+              <!-- image -->
+              <div class="panel-body">
+               <img src="/Images/DSC01468.JPG" >
+              </div>
+                  <div class="container-fluid bg-2" >
+                  <ul class="nav nav-justified nav-pills bg-2"> <!--  -->
+                  <li class="active"><a data-toggle="pill" href="#tasting1">TASTING</a></li>
+                  <li ><a data-toggle="pill" href="#pricing1">PRICING</a></li>
+                  </ul>
+                  </div>   
+              <!-- taste and price -->
+              <div class="panel-footer">
+                <div class="tab-content">
+                <!-- taste tab --> 
+                  <div id="tasting1" class="tab-pane fade in active">
+                     <ul style="list-style-type:none; margin:0; padding: 0;">
+                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
+                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
+                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
+                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
+                      </ul> 
+                 </div>
+                 <!-- PRICE -->
                 <div id="pricing1" class="tab-pane fade">
-
                  <h5> 1 Kilogram Bags </h5>
                               <table class="table table-bordered table-striped ">
                                 <tr>
@@ -439,59 +504,155 @@ color: #2d2d30;
                                   <td>£POA</td>
                                 </tr>
                               </table>
-                </div>
+                           </div> <!-- END OF PRICE  -->
+                          </div> <!-- TAB END -->
+                         </div> <!-- FOTTER END  -->
+                        </div>  <!-- PANEL  -->   
+                      </div> <!-- BOX END -->  
+          <!-- second box -->  
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel2 panel-default text-center">
+              <div class="panel-heading">
+                <h2>Decaf Espresso</h2>
               </div>
+              <!-- image -->
+              <div class="panel-body ">
+               <img src="/Images/DSC01468.JPG" >
+              </div>
+                  <div class="container-fluid bg-3" >
+                  <ul class="nav nav-justified nav-pills bg-3"> <!--  -->
+                  <li class="active"><a data-toggle="pill" href="#tasting2">TASTING</a></li>
+                  <li ><a data-toggle="pill" href="#pricing2">PRICING</a></li>
+                  </ul>
+                  </div>   
+              <!-- taste and price -->
+              <div class="panel-footer2 bg-3"> 
+                <div class="tab-content">
+                <!-- taste tab --> 
+                  <div id="tasting2" class="tab-pane fade in active">
+                     <ul style="list-style-type:none; margin:0; padding: 0;">
+                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
+                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
+                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
+                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
+                      </ul> 
+                 </div>
+                 <!-- PRICE -->
+                <div id="pricing2" class="tab-pane fade">
+                 <h5> 1 Kilogram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 10 </td>
+                                  <td>  > 10 & < 30 </td>
+                                  <td>  > 30 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£19.00</td>
+                                  <td>£17.00</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                             <h5> 250 gram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 5 </td>
+                                  <td>  > 5 & < 15 </td>
+                                  <td>  > 15 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£8.95</td>
+                                  <td>£5.95</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                           </div> <!-- END OF PRICE  -->
+                          </div> <!-- TAB END -->
+                         </div> <!-- FOTTER END  -->
+                        </div>  <!-- PANEL  -->   
+                      </div> <!-- BOX END -->  
+          <!-- third box -->
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel3 panel-default text-center">
+              <div class="panel-heading">
+                <h2>Limited Edition</h2>
+              </div>
+              <!-- image -->
+              <div class="panel-body">
+               <img src="/Images/DSC01468.JPG" >
+              </div>
+                  <div class="container-fluid bg-4" >
+                  <ul class="nav nav-justified nav-pills bg-4"> <!--  -->
+                  <li class="active"><a data-toggle="pill" href="#tasting3">TASTING</a></li>
+                  <li ><a data-toggle="pill" href="#pricing3">PRICING</a></li>
+                  </ul>
+                  </div>   
+              <!-- taste and price -->
+              <div class="panel-footer3">
+                <div class="tab-content">
+                <!-- taste tab --> 
+                  <div id="tasting3" class="tab-pane fade in active ">
+                     <ul style="list-style-type:none; margin:0; padding: 0;">
+                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
+                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
+                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
+                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
+                      </ul> 
+                 </div>
+                 <!-- PRICE -->
+                <div id="pricing3" class="tab-pane fade bg-5 ">
+                 <h5> 1 Kilogram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 10 </td>
+                                  <td>  > 10 & < 30 </td>
+                                  <td>  > 30 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£19.00</td>
+                                  <td>£17.00</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                             <h5> 250 gram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 5 </td>
+                                  <td>  > 5 & < 15 </td>
+                                  <td>  > 15 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£8.95</td>
+                                  <td>£5.95</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                           </div> <!-- END OF PRICE  -->
+                          </div> <!-- TAB END -->
+                         </div> <!-- FOTTER END  -->
+                        </div>  <!-- PANEL  -->   
+                      </div> <!-- BOX END -->  
         </div>
-      </div> 
-    </div> 
-    <div class="col-sm-4">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h2>Decaf Espresso</h2>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
-   <div class="col-sm-4">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h2>Limited edition</h2>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
-  </div>
 </div>
-</div>
+
+
+
+
+
 <br>
-<br
+<br>
 <!-- Container (Contact Section) -->
 <div id="contact" class="bg-1">
 <div  class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
+  <h3 class="text-center ">Contact</h3>
+  <p class="text-center "><em>We love our fans!</em></p>
 
   <div class="row">
     <div class="col-md-4">
@@ -570,15 +731,10 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 <script>
 $(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-
       // Prevent default anchor click behavior
       event.preventDefault();
 
@@ -595,6 +751,17 @@ $(document).ready(function(){
         window.location.hash = hash;
       });
     } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
   });
 })
 </script>
