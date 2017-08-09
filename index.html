@@ -55,16 +55,19 @@ html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
 
-.overlay { 
-  color:#fff;
-  position:absolute;
-  z-index:12;
-/*  top:35%;
-  left:35%;*/
-  margin:auto;
-  width:35%;
-  text-align:center;
+.container-box {
+   background-color:#000;
+   width:100%;
+   height: 100%;
+   text-align:center;
 }
+.overlay-box {
+   background-color:#fff;
+   width:30%;
+   margin: auto;
+}
+
+
   
   .container {
       padding: 30px 20px;
@@ -276,10 +279,16 @@ color: #2d2d30;
 </nav>
 
          
-<div class="overlay">
-         <img src="/Images/Logo.png"  class="img-responsive" ><!-- style="width:350px"> --> 
+<!-- <div class="container-box">
+         <img src="/Images/Logo.png"  class="img-responsive" >style="width:350px">class="img-responsive" >  
          <p>lujjjjjjjjjjjjjjjj</p>
-</div>       
+</div>    -->
+
+<div class="container-box">
+         <img src="/Images/Logo.png" class="overlay-box"></div>
+</div>  
+
+
 <!-- <div class="overlay"><h1>Overlay Text</h1></div> -->
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
