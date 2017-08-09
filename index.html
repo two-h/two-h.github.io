@@ -184,14 +184,11 @@ html,body{height:100%;}
       resize: none;
   }
 
-.overlay { 
-  color:#fff;
-  position:absolute;
-  z-index:12;
-  top:50%;
-  left:0;
-  width:100%;
-  text-align:center;
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 10;
 }
 
 /*FUCKING PILLS */
@@ -275,10 +272,9 @@ color: #2d2d30;
 </nav>
 
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
-<!-- <div class="overlay"><img src="/Images/Logo.png"></div>   -->
-<div style="position:absolute;right:0;bottom:0;width:20%;background:'/Images/Logo.png';z-index:100;"> </div>
-
-
+       <div class="overlay">
+      <img src="images/slideshowfx.png" class="image-responsive"/>
+      </div>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
