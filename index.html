@@ -16,8 +16,8 @@
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
+      animation-duration: 1.25s;
+      -webkit-animation-duration: 1.25s;
       visibility: visible;
   }
   @keyframes slide {
@@ -88,27 +88,10 @@
       padding: 3px;
 
   }
-
-  .bg-3 {
-      background-color: #B68BC4;
-      padding: 3px;
-
-  }
-  .bg-4 {
-      background-color: #BF7777 ;
-      padding: 3px;
-
-  }
-
-  .bg-5{
-      background-color: #E7CCCC  ;
-      padding: 3px;
-
-  }
-
-
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
+
+
   .list-group-item:first-child {
       border-top-right-radius: 0;
       border-top-left-radius: 0;
@@ -214,7 +197,7 @@
 .nav-pills>li.active>a, 
 .nav-pills>li.active>a:focus, 
 .nav-pills>li.active>a:hover {
-    background-color: #689389 ; /*dak shade for tab*/
+    background-color: #689389 ; 
 }
 .nav-pills a {
 color: #2d2d30;
@@ -226,23 +209,16 @@ color: #2d2d30;
     border-radius:0;
     transition: box-shadow 0.5s;
 }
-.panel2 {
-    border: 2px solid #B68BC4; 
-    border-radius:0;
-    transition: box-shadow 0.5s;
-}
-.panel3 {
-    border: 2px solid #BF7777; 
-    border-radius:0;
-    transition: box-shadow 0.5s;
-}
 
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 
-
-
+.panel-footer .btn:hover {
+    border: 1px solid #2d2d30 ; /*#8BC4B6;*/
+    background-color: #fff !important;
+    color: #f4511e;
+}
 
 .panel-heading {
     color: #fff !important;
@@ -259,31 +235,17 @@ color: #2d2d30;
     background-color: #D4E9E4 !important;
     color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
 }
-.panel-footer2 {
-    background-color: #E4D4E9 !important;/**/
-    color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
-}
-.panel-footer3 {
-    background-color: #E7CCCC  !important;/**/
-    color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
-}
 .panel-footer h3 {
-    font-size: 32px;
-}
-.panel-footer2 h3 {
     font-size: 32px;
 }
 .panel-footer h4 {
     color: #aaa;
     font-size: 14px;
 }
-.panel-footer2 h4 {
-    color: #aaa;
-    font-size: 14px;
-}
-.panel-footer3 h4 {
-    color: #aaa;
-    font-size: 14px;
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
 }
 
 
@@ -313,49 +275,37 @@ color: #2d2d30;
 </nav>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="/Images/DSC01567.JPG" alt="New York" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p>
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="/Images/DSC01468.JPG" alt="Chicago" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="/Images/DSC01584.JPG" alt="Los Angeles" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>pSWWWWWA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-        </div>      
-      </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="/Images/DSC01567.JPG" alt="Los Angeles">
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="item">
+      <img src="/Images/DSC01567.JPG" alt="Chicago">
+    </div>
+
+    <div class="item">
+      <img src="/Images/DSC01567.JPG" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 <!-- Container (The Band Section) -->
@@ -397,8 +347,8 @@ color: #2d2d30;
 <!-- Container (TOUR Section) -->
 <div id="tour" class="bg-1" >
   <br>
-      <h3 class="text-center "><p>Our Buisness <p></h3>
-      <p class="text-center  "><em>We got you covered!</em></p>
+      <h3 class="text-center"><p>Our Buisness <p></h3>
+      <p class="text-center"><em>We got you covered!</em></p>
 
   <div class="container">
     <ul class="nav nav-tabs ">
@@ -434,8 +384,8 @@ color: #2d2d30;
 
 <div id="tour">
   <br>
-  <h3 class="text-center  ">OUR COFFEE</h3>
-  <p class="text-center slideanim "><em>We got you covered!</em></p>
+  <h3 class="text-center">OUR COFFEE</h3>
+  <p class="text-center"><em>We got you covered!</em></p>
   <div class="text-center container">
       <p>At Two H we believe in simplcity and offer three, carefully profiled, coffees fit for purpose. 
       Our Seasonal Espresso beans will always make, what we believe, everything an espresso coffee should be. 
@@ -443,223 +393,129 @@ color: #2d2d30;
       The beans the make up our three coffee's will change over time, with the seasons and availability, but each will always be true to
       these beliefs. </p></div>
 
-        <div class="row slideanim container-fluid">
-        <!-- first box  -->
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
-              <div class="panel-heading">
-                <h2>Espresso</h2>
-              </div>
-              <!-- image -->
-              <div class="panel-body">
-               <img src="/Images/DSC01468.JPG" >
-              </div>
-                  <div class="container-fluid bg-2" >
-                  <ul class="nav nav-justified nav-pills bg-2"> <!--  -->
-                  <li class="active"><a data-toggle="pill" href="#tasting1">TASTING</a></li>
-                  <li ><a data-toggle="pill" href="#pricing1">PRICING</a></li>
-                  </ul>
-                  </div>   
-              <!-- taste and price -->
-              <div class="panel-footer">
-                <div class="tab-content">
-                <!-- taste tab --> 
-                  <div id="tasting1" class="tab-pane fade in active">
-                     <ul style="list-style-type:none; margin:0; padding: 0;">
-                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                      </ul> 
-                 </div>
-                 <!-- PRICE -->
-                <div id="pricing1" class="tab-pane fade">
-                 <h5> 1 Kilogram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 10 </td>
-                                  <td>  > 10 & < 30 </td>
-                                  <td>  > 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                             <h5> 250 gram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 5 </td>
-                                  <td>  > 5 & < 15 </td>
-                                  <td>  > 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                           </div> <!-- END OF PRICE  -->
-                          </div> <!-- TAB END -->
-                         </div> <!-- FOTTER END  -->
-                        </div>  <!-- PANEL  -->   
-                      </div> <!-- BOX END -->  
-          <!-- second box -->  
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel2 panel-default text-center">
-              <div class="panel-heading">
-                <h2>Decaf Espresso</h2>
-              </div>
-              <!-- image -->
-              <div class="panel-body ">
-               <img src="/Images/DSC01468.JPG" >
-              </div>
-                  <div class="container-fluid bg-3" >
-                  <ul class="nav nav-justified nav-pills bg-3"> <!--  -->
-                  <li class="active"><a data-toggle="pill" href="#tasting2">TASTING</a></li>
-                  <li ><a data-toggle="pill" href="#pricing2">PRICING</a></li>
-                  </ul>
-                  </div>   
-              <!-- taste and price -->
-              <div class="panel-footer2 bg-3"> 
-                <div class="tab-content">
-                <!-- taste tab --> 
-                  <div id="tasting2" class="tab-pane fade in active">
-                     <ul style="list-style-type:none; margin:0; padding: 0;">
-                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                      </ul> 
-                 </div>
-                 <!-- PRICE -->
-                <div id="pricing2" class="tab-pane fade">
-                 <h5> 1 Kilogram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 10 </td>
-                                  <td>  > 10 & < 30 </td>
-                                  <td>  > 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                             <h5> 250 gram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 5 </td>
-                                  <td>  > 5 & < 15 </td>
-                                  <td>  > 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                           </div> <!-- END OF PRICE  -->
-                          </div> <!-- TAB END -->
-                         </div> <!-- FOTTER END  -->
-                        </div>  <!-- PANEL  -->   
-                      </div> <!-- BOX END -->  
-          <!-- third box -->
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel3 panel-default text-center">
-              <div class="panel-heading">
-                <h2>Limited Edition</h2>
-              </div>
-              <!-- image -->
-              <div class="panel-body">
-               <img src="/Images/DSC01468.JPG" >
-              </div>
-                  <div class="container-fluid bg-4" >
-                  <ul class="nav nav-justified nav-pills bg-4"> <!--  -->
-                  <li class="active"><a data-toggle="pill" href="#tasting3">TASTING</a></li>
-                  <li ><a data-toggle="pill" href="#pricing3">PRICING</a></li>
-                  </ul>
-                  </div>   
-              <!-- taste and price -->
-              <div class="panel-footer3">
-                <div class="tab-content">
-                <!-- taste tab --> 
-                  <div id="tasting3" class="tab-pane fade in active ">
-                     <ul style="list-style-type:none; margin:0; padding: 0;">
-                        <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
-                        <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
-                        <li > <b> Process </b> <br> Pupled Natural & Washed </li>
-                        <li > <b> Verital </b> <br> Peaberry & Geisha </li>
-                      </ul> 
-                 </div>
-                 <!-- PRICE -->
-                <div id="pricing3" class="tab-pane fade bg-5 ">
-                 <h5> 1 Kilogram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 10 </td>
-                                  <td>  > 10 & < 30 </td>
-                                  <td>  > 30 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£19.00</td>
-                                  <td>£17.00</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                             <h5> 250 gram Bags </h5>
-                              <table class="table table-bordered table-striped ">
-                                <tr>
-                                  <th> Quantity </th>
-                                  <td>  < 5 </td>
-                                  <td>  > 5 & < 15 </td>
-                                  <td>  > 15 </td>
-                                </tr>
-                                <tr>
-                                  <th>Price </th>
-                                  <td>£8.95</td>
-                                  <td>£5.95</td>
-                                  <td>£POA</td>
-                                </tr>
-                              </table>
-                           </div> <!-- END OF PRICE  -->
-                          </div> <!-- TAB END -->
-                         </div> <!-- FOTTER END  -->
-                        </div>  <!-- PANEL  -->   
-                      </div> <!-- BOX END -->  
+ <div class="container-fluid">
+   <div class="row slideanim">
+    <div class="col-sm-4 slideanim ">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h2>Espresso</h2>
         </div>
+
+        <div>
+        <img src="/Images/espresso.jpg" style="width:100%">
+        </div>
+
+       <!-- put prcing and provonoce here could use pre-scrollable here|"panel-footer"-->  
+
+     <div class="container-fluid bg-2" >
+        <ul class="nav nav-justified nav-pills bg-2"> <!--  -->
+              <li class="active"><a data-toggle="pill" href="#tasting1">TASTING</a></li>
+              <li ><a data-toggle="pill" href="#pricing1">PRICING</a></li>
+        </ul>
+     </div>   
+ <div class="panel-footer"> 
+
+              <div class="tab-content">
+                <div id="tasting1" class="tab-pane fade in active">
+                   <ul style="list-style-type:none; margin:0; padding: 0;">
+                      <li > <b> Tasting </b> <br> bla bla bla bla bla Dark fruit & Nut </li>
+                      <li > <b> Origin  </b> <br> Brazillian & Hounduran </li>
+                      <li > <b> Process </b> <br> Pupled Natural & Washed </li>
+                      <li > <b> Verital </b> <br> Peaberry & Geisha </li>
+                    </ul> 
+               </div>
+
+                <div id="pricing1" class="tab-pane fade">
+
+                 <h5> 1 Kilogram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 10 </td>
+                                  <td>  > 10 & < 30 </td>
+                                  <td>  > 30 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£19.00</td>
+                                  <td>£17.00</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                             <h5> 250 gram Bags </h5>
+                              <table class="table table-bordered table-striped ">
+                                <tr>
+                                  <th> Quantity </th>
+                                  <td>  < 5 </td>
+                                  <td>  > 5 & < 15 </td>
+                                  <td>  > 15 </td>
+                                </tr>
+                                <tr>
+                                  <th>Price </th>
+                                  <td>£8.95</td>
+                                  <td>£5.95</td>
+                                  <td>£POA</td>
+                                </tr>
+                              </table>
+                </div>
+              </div>
+        </div>
+      </div> 
+    </div> 
+    <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h2>Decaf Espresso</h2>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div> 
+    </div> 
+   <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h2>Limited edition</h2>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div> 
+    </div> 
 </div>
-
-
-
-
-
+</div>
 <br>
 <br>
 <!-- Container (Contact Section) -->
 <div id="contact" class="bg-1">
 <div  class="container">
-  <h3 class="text-center ">Contact</h3>
-  <p class="text-center "><em>We love our fans!</em></p>
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
 
   <div class="row">
     <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+      <p>Want to chat ?</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>High Wycombe, Bucks</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: twohCoffee@gmail.com</p>
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -680,28 +536,10 @@ color: #2d2d30;
     </div>
   </div>
   <br>
-  <h3 class="text-center">From The Blog</h3>  
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="pill" href="#home">Mike</a></li>
-    <li><a data-toggle="pill" href="#menu1">Chandler</a></li>
-    <li><a data-toggle="pill" href="#menu2">Peter</a></li>
-  </ul>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h2>Mike Ross, Manager</h2>
-      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h2>Chandler Bing, Guitarist</h2>
-      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h2>Peter Griffin, Bass player</h2>
-      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-    </div>
-  </div>
+
  </div> 
+ </div>
 </div>
 
 <!-- Add Google Maps -->
@@ -731,10 +569,15 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 <script>
 $(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
+
       // Prevent default anchor click behavior
       event.preventDefault();
 
@@ -752,7 +595,7 @@ $(document).ready(function(){
       });
     } // End if
   });
-  
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -763,6 +606,7 @@ $(document).ready(function(){
         }
     });
   });
+
 })
 </script>
 
