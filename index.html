@@ -184,6 +184,16 @@ html,body{height:100%;}
       resize: none;
   }
 
+.overlay { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:50%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+
 /*FUCKING PILLS */
 .nav-pills>li.active>a, 
 .nav-pills>li.active>a:focus, 
@@ -267,6 +277,7 @@ color: #2d2d30;
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   
   <!-- Wrapper for slides -->
+<div class="overlay"><h1>Overlay Text</h1></div>  
   <div class="carousel-inner" role="listbox">
     <div class="item active">
         <img src="/Images/DSC01468.JPG" data-color="lightblue" alt="First Image">
