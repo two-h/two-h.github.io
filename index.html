@@ -54,9 +54,6 @@
 html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
-
-.logo { left:0; top:0; height:20%; width:100px;position: relative; }
-
   
   .container {
       padding: 30px 20px;
@@ -241,7 +238,15 @@ color: #2d2d30;
     background-color: #f4511e;
     color: #fff;
 }
-
+.overlay { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:50%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -267,23 +272,11 @@ color: #2d2d30;
   </div>
 </nav>
 
-         
-<!-- <div class="container-box">
-         <img src="/Images/Logo.png"  class="img-responsive" >style="width:350px">class="img-responsive" >  
-         <p>lujjjjjjjjjjjjjjjj</p>
-</div>    -->
 
-<!-- <div class="container-box">
-         <img src="/Images/Logo.png" class="overlay-box"></div>
-</div>   -->
-
-<div class="logo" style="background:url('/Images/Logo.png') center center no-repeat;">
-  <img src="/Images/Logo.png" style="display:none;" />
-</div>
-
-<!-- <div class="overlay"><h1>Overlay Text</h1></div> -->
+<div class="overlay"><h1>Overlay Text</h1></div>
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
+  
   <div class="carousel-inner" role="listbox">
     <div class="item active">
         <img src="/Images/DSC01468.JPG" data-color="lightblue" alt="First Image">
