@@ -55,20 +55,7 @@ html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
 
-.container-box {
-   background-color:#000;
-   width:100%;
-   height: 100%;
-   text-align:center;
-}
-.overlay-box {
-   background-color:#fff;
-   position:absolute;
-   vertical-align: middle;
-
-
-}
-
+.logo { left:0; top:0; height:100%; width:100px;position: relative; }
 
   
   .container {
@@ -286,10 +273,13 @@ color: #2d2d30;
          <p>lujjjjjjjjjjjjjjjj</p>
 </div>    -->
 
-<div class="container-box">
+<!-- <div class="container-box">
          <img src="/Images/Logo.png" class="overlay-box"></div>
-</div>  
+</div>   -->
 
+<div class="logo" style="background:url('/Images/Logo.png') center center no-repeat;">
+  <img src="/Images/Logo.png" style="display:none;" />
+</div>
 
 <!-- <div class="overlay"><h1>Overlay Text</h1></div> -->
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
