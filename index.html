@@ -772,12 +772,68 @@ Image credits: unsplash.com
 <div id="googleMap"></div>
 <script>
 function myMap() {
-var myCenter = new google.maps.LatLng(51.628579,-0.748687 );
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.Marker({position:myCenter});
-marker.setMap(map);
+
+  var pantry = {
+    info: '<strong>The Pantry</strong><br>\
+          7 Park Parade <br> High Wycombe<br>\
+          <a href="https://goo.gl/q8KiuR">Get Directions</a>',
+    lat: 51.65581175,
+    long: -0.70754528
+  };
+
+  var cc = {
+    info: '<strong>Caffine&Cocktails</strong><br>\
+          Unit 5, The Walk <br> Reading<br>\
+          <a href="https://goo.gl/WobkH5">Get Directions</a>',
+    lat: 51.45563817,
+    long: -0.96396446
+  };
+
+  var tin = {
+    info: '<strong>Tin Kitchen</strong><br>\r\
+          2 The Quadrangle <br> High Wycombe <br>\
+          <a href="https://goo.gl/FS5kQB">Get Directions</a>',
+    lat: 51.6311379,
+    long: -0.725792
+  };
+
+  var locations = [
+      [pantry.info, pantry.lat, pantry.long, 0],
+      [cc.info, cc.lat, cc.long, 1],
+      [tin.info, tin.lat, tin.long, 2],
+    ];
+
+  var map = new google.maps.Map(document.getElementById('googleMap'), {
+    zoom: 5,
+    center: new google.maps.LatLng(41.976816, -87.659916),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var infowindow = new google.maps.InfoWindow({});
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
 }
+// function myMap() {
+// var myCenter = new google.maps.LatLng(51.628579,-0.748687 );
+// var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+// var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+// var marker = new google.maps.Marker({position:myCenter});
+// marker.setMap(map);
+// }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap"></script>
 <!--
