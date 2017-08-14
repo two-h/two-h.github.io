@@ -247,6 +247,13 @@ color: #2d2d30;
   width:35%;
   text-align:center;
 }
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+}
 /*new carosel*/
 /*
 Fade content bs-carousel with hero headers
@@ -303,19 +310,19 @@ Image credits: unsplash.com
 
 .fade-carousel .carousel-inner .item .hero {
     opacity: 0;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s; 
+    -webkit-transition: 1.25s all ease-in-out .1s;
+       -moz-transition: 1.25s all ease-in-out .1s; 
+        -ms-transition: 1.25s all ease-in-out .1s; 
+         -o-transition: 1.25s all ease-in-out .1s; 
+            transition: 1.25s all ease-in-out .1s; 
 }
 .fade-carousel .carousel-inner .item.active .hero {
     opacity: 1;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s;    
+    -webkit-transition: 1.25s all ease-in-out .1s;
+       -moz-transition: 1.25s all ease-in-out .1s; 
+        -ms-transition: 1.25s all ease-in-out .1s; 
+         -o-transition: 1.25s all ease-in-out .1s; 
+            transition: 1.25s all ease-in-out .1s;    
 }
 
 /********************************/
@@ -327,7 +334,7 @@ Image credits: unsplash.com
     height: 100%;
     z-index: 2;
     background-color: #080d15;
-    opacity: .7;
+    opacity: 0;
 }
 
 /********************************/
@@ -405,6 +412,7 @@ Image credits: unsplash.com
 
 <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
   <!-- Overlay -->
+ <img src="/Images/Logo.png" class="logo">
 
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -421,10 +429,9 @@ Image credits: unsplash.com
       </div>
       <div class="hero">
         <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
+            <h1>TWO H</h1>        
+            <h3>Nice to meet you </h3>
         </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
       </div>
     </div>
     <div class="item slides">
@@ -433,10 +440,9 @@ Image credits: unsplash.com
       </div>
       <div class="hero">        
         <hgroup>
-            <h1>We are smart</h1>        
-            <h3>Get start your next awesome project</h3>
+            <h1>TWO H </h1>        
+            <h3>take a look around </h3>
         </hgroup>       
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
       </div>
     </div>
     <div class="item slides">
@@ -445,10 +451,9 @@ Image credits: unsplash.com
       </div>
       <div class="hero">        
         <hgroup>
-            <h1>We are amazing</h1>        
-            <h3>Get start your next awesome project</h3>
+            <h1>TWO H</h1>        
+            <h3>and get in touch</h3>
         </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
       </div>
     </div>
   </div> 
