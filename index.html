@@ -357,160 +357,106 @@ Image credits: unsplash.com
   background-image: url("/Images/DSC01448.JPG");
 }
 
-/*GALLERY SHIT*/
-*{box-sizing: border-box; -webkit-box-sizing: border-box; }
-html, body { height: 100%; }
-
-
-/*
-PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
-http://stackoverflow.com/a/34696029/383904
-*/
-
-.CSSgal {
-  position: relative;
-  overflow: hidden;
-  height: 100%; /* Or set a fixed height */
-}
-
-/* SLIDER */
-
-.CSSgal .slider {
-  height: 100%;
-  white-space: nowrap;
-  font-size: 0;
-  transition: 0.8s;
-}
-
-/* SLIDES */
-
-.CSSgal .slider > * {
-  font-size: 1rem;
-  display: inline-block;
-  white-space: normal;
-  vertical-align: top;
-  height: 100%;
-  width: 100%;
-  background: none 50% no-repeat;
-  background-size: cover;
-}
-
-/* PREV/NEXT, CONTAINERS & ANCHORS */
-
-.CSSgal .prevNext {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  width: 100%;
-  height: 0;
-}
-
-.CSSgal .prevNext > div+div {
-  visibility: hidden; /* Hide all but first P/N container */
-}
-
-.CSSgal .prevNext a {
-  background: #fff;
-  position: absolute;
-  width:       60px;
-  height:      60px;
-  line-height: 60px; /* If you want to place numbers */
-  text-align: center;
-  opacity: 0.7;
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-}
-.CSSgal .prevNext a:hover {
-  opacity: 1;
-}
-.CSSgal .prevNext a+a {
-  left: auto;
-  right: 0;
-}
-
-/* NAVIGATION */
-
-.CSSgal .bullets {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-}
-.CSSgal .bullets > a {
-  display: inline-block;
-  width:       30px;
-  height:      30px;
-  line-height: 30px;
-  text-decoration: none;
-  text-align: center;
-  background: rgba(255, 255, 255, 1);
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
-}
-.CSSgal .bullets > a+a {
-  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
-}
-.CSSgal .bullets > a:hover {
-  background: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* NAVIGATION BUTTONS */
-/* ALL: */
-.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
-/* ACTIVE */
-#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
-#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
-#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
-#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
-/* More slides? Add here more rules */
-
-/* PREV/NEXT CONTAINERS VISIBILITY */
-/* ALL: */
-.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
-/* ACTIVE: */
-#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
-#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
-#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
-#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
-/* More slides? Add here more rules */
-
-/* SLIDER ANIMATION POSITIONS */
-
-#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
-#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
-#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
-/* More slides? Add here more rules */
-
-
-/* YOU'RE THE DESIGNER! 
-   ____________________
-   All above was mainly to get it working :)
-   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
-
-.CSSgal{
-  color: #fff;  
-  text-align: center;
-}
-.CSSgal .slider h2 {
-  margin-top: 40vh;
-  font-weight: 200;
-  letter-spacing: -0.06em;
-  word-spacing: 0.2em;
-  font-size: 3em;
-}
-.CSSgal a {
-  border-radius: 50%;
-  margin: 0 3px;
-  color: rgba(0,0,0,0.8);
-  text-decoration: none;
-}
-
+/*GALLERY*/
+.swiper-container {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   
+   .swiper-slide {
+      cursor: pointer;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+   }
+   
+   .gallery-top {
+      height: 80%;
+      width: 100%;
+   }
+   
+   .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+   }
+   
+   .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+      background-size: cover;
+      cursor: pointer;
+   }
+   
+   .gallery-thumbs .swiper-slide-active {
+      opacity: 1;
+   }
+   
+   .close-button {
+      display: none;
+      height: 45px;
+      width: 45px;
+      color: #fff;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      font-size: 32px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 9999;
+      opacity: .75;
+   }
+   
+   .close-button:before {
+      content: '×';
+   }
+   
+   .close-button:hover,
+   .close-button:active {
+      opacity: 1;
+   }
+   
+   .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #161418;
+   }
+   
+   .fullscreen .gallery-top .swiper-slide {
+      cursor: default;
+      background-size: contain;
+   }
+   
+   .fullscreen .close-button {
+      display: block;
+   }
+   
+   .fullscreen .gallery-top {
+      height: 100%
+   }
+   
+   .fullscreen .gallery-thumbs {
+      background-color: #000;
+      height: 20%;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      z-index: 10;
+      transition: opacity .3s ease-in-out;
+      transition-delay: .5s;
+   }
+   
+   .fullscreen .gallery-thumbs:hover {
+      opacity: 1;
+      transition-delay: 0s;
+   }
 
 /********************************/
 /*          Media Queries       */
@@ -884,43 +830,36 @@ http://stackoverflow.com/a/34696029/383904
   </div>
 </div>
 <!-- GALLERY -->
-<div class="CSSgal">
-
-  <!-- Don't wrap targets in parent -->
-  <s id="s1"></s> 
-  <s id="s2"></s>
-  <s id="s3"></s>
-  <s id="s4"></s>
-
-  <div class="slider">
-    <div style="background:#5b8;">
-        <img src="/Images/limited.jpg" style="height:50%">
-    </div>
-    <div style="background:#85b;">
-      <h2>Slide 2</h2>
-    </div>
-    <div style="background:#e95;">
-      <h2>Slide 3</h2>
-    </div>
-    <div style="background:#e59;">
-      <h2>Slide 4</h2>
-    </div>
-  </div>
-  
-  <div class="prevNext">
-    <div><a href="#s4"></a><a href="#s2"></a></div>
-    <div><a href="#s1"></a><a href="#s3"></a></div>
-    <div><a href="#s2"></a><a href="#s4"></a></div>
-    <div><a href="#s3"></a><a href="#s1"></a></div>
-  </div>
-
-  <div class="bullets">
-    <a href="#s1">1</a>
-    <a href="#s2">2</a>
-    <a href="#s3">3</a>
-    <a href="#s4">4</a>
-  </div>
-
+<div class="container">
+   <div class="row">
+      <div class="col-sm-6 col-sm-push-3">
+         <br/>
+         <h1 class="text-center">Mobile touch gallery</h1>
+         <br/>
+         <br/>
+         <!-- Swiper -->
+         <div class="swiper-container">
+            <span class="close-button"></span>
+            <div class="gallery-top">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+               </div>
+               <!-- Add Arrows -->
+               <div class="swiper-button-next swiper-button-white"></div>
+               <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="gallery-thumbs">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+                  <div class="swiper-slide" style="background-image:url(https://unsplash.it/1920/1080)"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 <!-- GALLERY END -->
 <!-- Container (Contact Section) -->
@@ -1053,6 +992,53 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 
 <script>
+// GALLERY
+var galleryTop = new Swiper('.gallery-top', {
+   nextButton: '.swiper-button-next',
+   prevButton: '.swiper-button-prev',
+   spaceBetween: 10,
+   keyboardControl: true
+});
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+   spaceBetween: 10,
+   centeredSlides: true,
+   slidesPerView: 'auto',
+   touchRatio: 0.2,
+   slideToClickedSlide: true
+});
+galleryTop.params.control = galleryThumbs;
+galleryThumbs.params.control = galleryTop;
+
+var sliders = document.querySelectorAll('.swiper-slide');
+for (var i = 0; i < sliders.length; ++i) {
+   sliders[i].addEventListener('click', function(event) {
+      event.target.parentNode.parentNode.parentNode.classList.add('fullscreen');
+      setTimeout(function() {
+         galleryTop.update();
+         galleryThumbs.update();
+      }, 200);
+   }, false);
+}
+
+var closeButtons = document.querySelectorAll('.close-button');
+for (var y = 0; y < closeButtons.length; ++y) {
+   closeButtons[y].addEventListener('click', function(event) {
+      console.log(event);
+      var fullScreenElements = document.querySelectorAll('.fullscreen');
+      console.log(fullScreenElements);
+      for (var x = 0; x < fullScreenElements.length; ++x) {
+         fullScreenElements[x].classList.remove('fullscreen');
+         setTimeout(function() {
+            galleryTop.update();
+            galleryThumbs.update();
+         }, 200);
+      }
+   });
+}
+// gallery 
+
+
+
 $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
