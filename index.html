@@ -357,106 +357,7 @@ Image credits: unsplash.com
   background-image: url("/Images/DSC01448.JPG");
 }
 
-/*GALLERY*/
-.swiper-container {
-      width: 100%;
-      height: 300px;
-      margin-left: auto;
-      margin-right: auto;
-   }
-   
-   .swiper-slide {
-      cursor: pointer;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-   }
-   
-   .gallery-top {
-      height: 80%;
-      width: 100%;
-   }
-   
-   .gallery-thumbs {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-   }
-   
-   .gallery-thumbs .swiper-slide {
-      width: 25%;
-      height: 100%;
-      opacity: 0.4;
-      background-size: cover;
-      cursor: pointer;
-   }
-   
-   .gallery-thumbs .swiper-slide-active {
-      opacity: 1;
-   }
-   
-   .close-button {
-      display: none;
-      height: 45px;
-      width: 45px;
-      color: #fff;
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      font-size: 32px;
-      text-align: center;
-      cursor: pointer;
-      z-index: 9999;
-      opacity: .75;
-   }
-   
-   .close-button:before {
-      content: '×';
-   }
-   
-   .close-button:hover,
-   .close-button:active {
-      opacity: 1;
-   }
-   
-   .fullscreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #161418;
-   }
-   
-   .fullscreen .gallery-top .swiper-slide {
-      cursor: default;
-      background-size: contain;
-   }
-   
-   .fullscreen .close-button {
-      display: block;
-   }
-   
-   .fullscreen .gallery-top {
-      height: 100%
-   }
-   
-   .fullscreen .gallery-thumbs {
-      background-color: #000;
-      height: 20%;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      opacity: 0;
-      z-index: 10;
-      transition: opacity .3s ease-in-out;
-      transition-delay: .5s;
-   }
-   
-   .fullscreen .gallery-thumbs:hover {
-      opacity: 1;
-      transition-delay: 0s;
-   }
+
 
 /********************************/
 /*          Media Queries       */
@@ -584,7 +485,7 @@ Image credits: unsplash.com
 </div>
 
 <!-- Container (TOUR Section) -->
-<div id="ourBuisness" class="bg-1" >
+<div id="ourBuisness" class="bg-1" style="height:100%" >
   <br>
       <h3 class="text-center"><p>Our Buisness <p></h3>
       <p class="text-center"><em>We got you covered!</em></p>
@@ -830,37 +731,7 @@ Image credits: unsplash.com
   </div>
 </div>
 <!-- GALLERY -->
-<div class="container">
-   <div class="row">
-      <div class="col-sm-6 col-sm-push-3">
-         <br/>
-         <h1 class="text-center">Mobile touch gallery</h1>
-         <br/>
-         <br/>
-         <!-- Swiper -->
-         <div class="swiper-container">
-            <span class="close-button"></span>
-            <div class="gallery-top">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-               </div>
-               <!-- Add Arrows -->
-               <div class="swiper-button-next swiper-button-white"></div>
-               <div class="swiper-button-prev swiper-button-white"></div>
-            </div>
-            <div class="gallery-thumbs">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-                  <div class="swiper-slide" style="background-image:url(/Images/DSC01584.JPG)" ></div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+
 <!-- GALLERY END -->
 <!-- Container (Contact Section) -->
 <div id="contact" class="bg-1">
@@ -992,12 +863,6 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 
 <script>
-// GALLERY
-
-// gallery 
-
-
-
 $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
@@ -1036,51 +901,8 @@ $(document).ready(function(){
         }
     });
   });
+
 })
-
-var galleryTop = new Swiper('.gallery-top', {
-   nextButton: '.swiper-button-next',
-   prevButton: '.swiper-button-prev',
-   spaceBetween: 10,
-   keyboardControl: true
-});
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-   spaceBetween: 10,
-   centeredSlides: true,
-   slidesPerView: 'auto',
-   touchRatio: 0.2,
-   slideToClickedSlide: true
-});
-galleryTop.params.control = galleryThumbs;
-galleryThumbs.params.control = galleryTop;
-
-var sliders = document.querySelectorAll('.swiper-slide');
-for (var i = 0; i < sliders.length; ++i) {
-   sliders[i].addEventListener('click', function(event) {
-      event.target.parentNode.parentNode.parentNode.classList.add('fullscreen');
-      setTimeout(function() {
-         galleryTop.update();
-         galleryThumbs.update();
-      }, 200);
-   }, false);
-}
-
-var closeButtons = document.querySelectorAll('.close-button');
-for (var y = 0; y < closeButtons.length; ++y) {
-   closeButtons[y].addEventListener('click', function(event) {
-      console.log(event);
-      var fullScreenElements = document.querySelectorAll('.fullscreen');
-      console.log(fullScreenElements);
-      for (var x = 0; x < fullScreenElements.length; ++x) {
-         fullScreenElements[x].classList.remove('fullscreen');
-         setTimeout(function() {
-            galleryTop.update();
-            galleryThumbs.update();
-         }, 200);
-      }
-   });
-}
-
 
 $('.carousel').carousel({
   interval: 4000
