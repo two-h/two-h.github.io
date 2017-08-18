@@ -365,12 +365,61 @@ color: #2d2d30;
 }
 
 /*GALLERY SHIT*/
-.thumb{
-  background-color: red
-  margin
-
-
+.owl-carousel {
+  position: relative;
+  height: 100%;
 }
+.owl-carousel div:not(.owl-controls) {
+  height: 100%;
+}
+.owl-carousel .owl-slide {
+  background-image: url('https://images.unsplash.com/photo-1437915015400-137312b61975?fit=crop&fm=jpg&h=800&q=80&w=1200');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.owl-carousel div.owl--text {
+  position: absolute;
+  bottom: 4em;
+  left: 2em;
+  width: 20em;
+  height: 8em;
+  padding: 1em;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 4px;
+}
+.owl-carousel .owl-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.owl-carousel .owl-controls .owl-buttons div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  zoom: 1;
+  margin: 0;
+  width: 50px;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 0.9em;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  opacity: 0.6;
+  text-transform: capitalize;
+}
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+  left: 5px;
+}
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+  right: 5px;
+}
+
+
 /*GALLERY SHIT*/
 
   </style>
@@ -749,58 +798,21 @@ color: #2d2d30;
   <p class="text-center"><em>We have collected a few piuctures of the latest goings on </em></p>
   <p class="text-center"><em> Click to find out more !</em></p>
 
-<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel" style="height:50vh">
-  <!-- Overlay -->
-  <div class="overlay">
-  <img src="/Images/Logo.png" style="width:35%"> 
+<div id="owl-example" class="owl-carousel">
+  <div class="owl-slide">
+    <div class="owl--text">
+    This is a full height Owl slider. There is nothing else interesting here!</div>
   </div>
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#bs-carousel" data-slide-to="1"></li>
-    <li data-target="#bs-carousel" data-slide-to="2"></li>
-  </ol>
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item slides active">
-      <div class="slide-1">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">
-        <hgroup>   
-<!--             <h1>Nice to meet you </h1> -->
-            <h3>TWO H</h3>              
-        </hgroup>
-      </div>
+  <div class="owl-slide">
+    <div class="owl--text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit!</div>
+  </div>
+  <div class="owl-slide">
+    <div class="owl--text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam excepturi voluptate eveniet consectetur numquam laboriosam.
     </div>
-    <div class="item slides">
-      <div class="slide-2">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">
-
-        <hgroup>
-<!--             <h1>take a look around </h1> -->
-            <h3>TWO H</h3>  
-        </hgroup>       
-      </div>
-    </div>
-    <div class="item slides">
-      <div class="slide-3">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">        
-        <hgroup>
-<!--             <h1>and get in touch</h1> -->
-            <h3>TWO H</h3>  
-        </hgroup>
-      </div>
-    </div>
-  </div> 
+  </div>
 </div>
-
-
 
 </div> <!-- container end  -->
 </div> <!-- bg-1 end -->
@@ -985,7 +997,20 @@ $(document).ready(function(){
   interval: 4000
 });
 
-})
+ 
+  $("#owl-example").owlCarousel({
+    navigation : true, 
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem: true,
+      pagination: false,
+      rewindSpeed: 500
+
+ 
+});
+
+
+})//end
 
 
 
