@@ -6,12 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/css/swiper.min.css"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
   <style>
   .slideanim {visibility:hidden;}
   .slide {
@@ -755,54 +759,48 @@ Image credits: unsplash.com
   <p class="text-center"><em>We have collected a few piuctures of the latest goings on </em></p>
   <p class="text-center"><em> Click to find out more !</em></p>
 
+<div class="w3-container" id="apartment">
+    <h2 class="w3-text-green">The Apartment</h2>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/livingroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Living Room</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/diningroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Dining Room</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/bedroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Bedroom</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/livingroom2.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Living Room II</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/diningroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/bedroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
 
-<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <!-- Overlay -->
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#bs-carousel" data-slide-to="1"></li>
-    <li data-target="#bs-carousel" data-slide-to="2"></li>
-  </ol>
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item slides active">
-      <div class="slide-1">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">
-        <hgroup>   
-<!--             <h1>Nice to meet you </h1> -->
-            <h3>TWO H</h3>              
-        </hgroup>
-      </div>
-    </div>
-    <div class="item slides">
-      <div class="slide-2">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">
-
-        <hgroup>
-<!--             <h1>take a look around </h1> -->
-            <h3>TWO H</h3>  
-        </hgroup>       
-      </div>
-    </div>
-    <div class="item slides">
-      <div class="slide-3">
-          <div class="overlay"></div>
-      </div>
-      <div class="hero">        
-        <hgroup>
-<!--             <h1>and get in touch</h1> -->
-            <h3>TWO H</h3>  
-        </hgroup>
-      </div>
-    </div>
-  </div> 
-</div>
 
 
 
