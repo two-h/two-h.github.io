@@ -387,7 +387,7 @@ color: #2d2d30;
   margin: 0;
   padding: 0;
 /*  height: 200px;*/
-  width: 75%;
+  width: 100%;
   height: auto;
   list-style: none;
 }
@@ -400,7 +400,7 @@ color: #2d2d30;
   padding: 0;
 /*  width: 500px;
   height: 300px;*/
-  width: 75%;
+  width: 100%;
   height: auto;
   background: #ccc;
   text-align: center;
@@ -426,7 +426,7 @@ a.control_prev, a.control_next {
 
 a.control_prev:hover, a.control_next:hover {
   opacity: 1;
-  -webkit-transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 a.control_prev {
@@ -438,12 +438,6 @@ a.control_next {
   border-radius: 2px 0 0 2px;
 }
 
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
-}
 
 
 
@@ -826,23 +820,19 @@ a.control_next {
   <p class="text-center"><em> Click to find out more !</em></p>
 
 
-<h1>Incredibly Basic Slider</h1>
+<div = class="container ">
 <div id="slider">
   <a class="control_next">>></a>
   <a class="control_prev"><</a>  <!-- href="#" -->
   <ul>
     <li>SLIDE 1</li>
-    <li style="background: #aaa;">SLIDE 2</li>
+    <li style="background: #aaa;" class="slide-1"></li>
     <li>SLIDE 3</li>
     <li style="background: #aaa;">SLIDE 4</li>
   </ul>  
 </div>
 
-<div class="slider_option">
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">Autoplay Slider</label>
-</div> 
-
+</div>
 
 
 
