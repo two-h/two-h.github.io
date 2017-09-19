@@ -1,0 +1,723 @@
+Get access to an awe-inspiring collection Of 87 Beautiful Wordpress themes for the price of one GET IT NOW AD
+Bootstrapious logoBootstrapious - go to homepage
+BOOTSTRAP TEMPLATES
+WORDPRESS
+BLOG
+RESOURCES
+SUPPORT US
+Home   Blog   Tutorials   How to build a working Bootstrap contact form
+HOW TO BUILD A WORKING BOOTSTRAP CONTACT FORM
+
+
+ 
+PUBLISHED: 16.5.2016 | LAST UPDATE: 15.5.2017
+
+Today I would like to show you how to easily build a working HTML contact form using a Bootstrap framework and AJAX with PHP. You will need some basic knowledge of HTML, CSS and Bootstrap CSS framework. 
+
+In the tutorial, I will walk you through the parts that will show you how to code the contact form in HTML, style it a bit and add real-time validation to the required fields. 
+
+Then I will show you how the data is handled and email sent in the PHP script.
+
+As the last thing, you will learn how little JavaScript magic (we will use jQuery) is needed to submit the form via AJAX without reloading the page itself. This will be really handy when you have the contact form on the one-page web and you don't want to reload the whole page.
+
+The result of this tutorial will be working responsive contact form with fields validation and with some basic CSS styling. It will look like on the picture below.
+
+Contact Form in Bootstrap
+DEMO DOWNLOAD FILES
+
+Many of my free Bootstrap templates come with a contact form, so you can use this solution to make them work too.
+
+HTML template
+
+Let's start with the main HTML layout of our contact form page.
+
+There should not be anything tricky for you, so just a few words about it:
+
+In the head, we include the Bootstrap stylesheet, Lato from Google fonts, and a local custom.css stylesheet. 
+before the <body> closing tag we include jQuery, Bootstrap scripts and local contact.js file which will handle AJAX sending of the form
+for Bootstrap, jQuery and a Font I used their CDN versions. If you test the scripts without an internet connection, don't forget to include their local versions.
+Html
+<html>
+    <head>
+        <title>Contact Form Tutorial by Bootstrapious.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='custom.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
+
+                    <p class="lead">This is a demo for our tutorial dedicated to crafting working Bootstrap contact form with PHP and AJAX background.</p>
+
+                    <!-- We're going to place the form here in the next step -->
+                    <form></form> 
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="validator.js"></script>
+        <script src="contact.js"></script>
+    </body>
+</html>
+HTML code of the Contact form
+
+As we have the main layout ready, we can replace the <form></form> in our HTML code with our fancy Bootstrap Contact form itself.
+
+At the end form should look like this:
+
+Html
+<form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone">Phone</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> These fields are required. Contact form template by <a href="http://bootstrapious.com" target="_blank">Bootstrapious</a>.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
+Well, this looks a bit more interesting already, so let's have a look at all the pieces of the puzzle now:
+
+We will send the contact form values via POST to the PHP script called contact.php. As there could be more forms on the page (search etc.), we mark our form with #contact-form id to address it correctly in JavaScript later on. There is also empty div .messages that will serve us to display the success or error message after sending the form via AJAX.
+Standard Bootstrap forms markup is used - rows, columns, form groups. Form groups are Bootstrap helpers that take care of the appropriate vertical spacing in the form.
+Do not forget to properly assign labels for the fields using their for attribute. This should contain the id of the form element it refers to.
+For the validation of the fields, we will be using the great Bootstrap validator. Validation rules are specified on form inputs via the standard HTML5 attributes, in our case these are required and type="email". 
+We will be using custom error messages for each field, passed to the script in the data-error attribute. 
+To display the possible errors, there is a <div class="help-block with-errors"></div> block added to each form-group
+Also, note type="email" and type="tel" inputs that will enhance the user experience, especially for users using a mobile device. 
+This should basically do for the HTML part of the form and we can move on to the PHP script.
+
+Do not forget to download and include the Bootstrap validator JavaScript files if you are writing the code yourself. Download them from here.
+PHP script
+
+The PHP script that will handle the email sending is located in the contact.php file.
+
+In the first part of the script, we configure basic variables we will need. These are:
+
+$from - the email address that will be in the From field of the email. Important: To avoid being marked as spam or even to be able to send it from your web host, use an existing email on your domain. If you will be using the form on mygreatsite.com, use 'info@mygreatsite.com' in this variable. 
+$sendTo - the email address that will receive the email with the output of the form. Can be your personal address or can be same as the address as in $from variable. Make sure this email exists.
+$subject - the subject of the email
+$fields - an array of form control names and their English counterparts. If we have input called name <input name="name">, we can call it in our email e.g. Customer Name like this: 'name' => 'Customer Name'
+$okMessage - the message text displayed on the web page when the message is successfully sent
+$errorMessage - the text of the message displayed in case of an error
+We will wrap the whole code block in the try/catch block which will catch all the possible errors. 
+
+The code that prepares and sends the email based on the form values works as follows:
+
+if the POST array where the form values are stored is not empty, continue. Otherwise, if (count($_POST) == 0), throw an  error message
+Then, we start building the email message content in $emailText variable.
+We iterate through the $_POST ( the array containing all the values sent through the POST request).
+If we find out that the key of the item from $_POST array also exists in our $fields array, we include it to the text of the message in $emailText. 
+We send the email via PHP internal mail() function. We add some important headers to the email using the $headers array (encoding, from header, reply to, etc.)
+We create $responseArray variable to be sent as a JSON response back to our index.html. The $responseArray will be handled by our JavaScript function and displayed as a Bootstrap alert box.
+If the request came via AJAX (you check this in PHP using the condition if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')) , we send the JSON response. If not, we simply display the message (this should be a rare case - e.g. for users with disabled JavaSript)
+PHP
+<?php
+/*
+ *  CONFIGURE EVERYTHING HERE
+ */
+
+// an email address that will be in the From field of the email.
+$from = 'Demo contact form <demo@domain.com>';
+
+// an email address that will receive the email with the output of the form
+$sendTo = 'Demo contact form <demo@domain.com>';
+
+// subject of the email
+$subject = 'New message from contact form';
+
+// form field names and their translations.
+// array variable name => Text to appear in the email
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
+
+// message that will be displayed when everything is OK :)
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+
+// If something goes wrong, we will display this message.
+$errorMessage = 'There was an error while submitting the form. Please try again later';
+
+/*
+ *  LET'S DO THE SENDING
+ */
+
+// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE);
+
+try
+{
+
+    if(count($_POST) == 0) throw new \Exception('Form is empty');
+            
+    $emailText = "You have a new message from your contact form\n=============================\n";
+
+    foreach ($_POST as $key => $value) {
+        // If the field exists in the $fields array, include it in the email 
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
+    }
+
+    // All the neccessary headers for the email.
+    $headers = array('Content-Type: text/plain; charset="UTF-8";',
+        'From: ' . $from,
+        'Reply-To: ' . $from,
+        'Return-Path: ' . $from,
+    );
+    
+    // Send email
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+// else just display the message
+else {
+    echo $responseArray['message'];
+}
+Technical requirements for the PHP are:
+
+PHP >= 5.3
+email server setup
+Local testing and usage: If you are testing the contact form on your computer, the PHP script and whole process should work but you will not receive the email to your inbox. To be able to receive the emails, you will need to upload the script to your webhost.
+
+Do you need a web host? Check out GoDaddy ($1/mo for new customers) or Fat Cow ($3/mo for new customers).
+
+A little bit of Javascript
+
+The JavaScript part of this tutorial will handle the validation of the form and its sending via AJAX. We will save it to contact.js.
+
+First, we will run the validator script on our contact form.
+
+Then, we will add some JavaScript that will help us with the submitting of the form via AJAX request.
+
+It works like this:
+
+When the form with the #contact-form id is submitted, we make the POST request to the contact.php script.
+On request's success, we work with the JSON object that is returned by the PHP script. The object has only two properties - type and message
+We use type and message to construct the message visible for the user - in case of error we display alert-danger, in case of success we display alert-success
+We display the message, reset form inputs and return false; to prevent the usual form submitting
+JavaScript
+$(function () {
+
+    // init the validator
+    // validator files are included in the download package
+    // otherwise download from http://1000hz.github.io/bootstrap-validator
+
+    $('#contact-form').validator();
+
+
+    // when the form is submitted
+    $('#contact-form').on('submit', function (e) {
+
+        // if the validator does not prevent form submit
+        if (!e.isDefaultPrevented()) {
+            var url = "contact.php";
+
+            // POST values in the background the the script URL
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    // data = JSON object that contact.php returns
+
+                    // we recieve the type of the message: success x danger and apply it to the 
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    // let's compose Bootstrap alert box HTML
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    
+                    // If we have messageAlert and messageText
+                    if (messageAlert && messageText) {
+                        // inject the alert to .messages div in our form
+                        $('#contact-form').find('.messages').html(alertBox);
+                        // empty the form
+                        $('#contact-form')[0].reset();
+                    }
+                }
+            });
+            return false;
+        }
+    })
+});
+Wrapping Up
+
+So, that's all for today. You should have a great contact form working and ready to be implemented on your website.
+
+As always, there could be further modifications done as e.g. Captcha implementation - I will try to include some of these in one of the next updates of this tutorial. I have created a tutorial covering this topic: check out Bootstrap & ReCaptcha form tutorial. If you haven't done that already, have a look at my free Bootstrap themes too.
+
+If you liked the article - any share are greatly appreciated, as always.
+
+Thanks!
+
+Update 5/5/2017: Further modifications of our Bootstrap contact form
+
+This article is one of the most read articles on Bootstrapious and has helped based on your feedback a lot of people so far. I usually update my articles with small fixes only but I decided to give this one a bit of a special care. Today, I would like to show you some more modifications that can take the functionalities of the form a bit further. Many of them are based on your comments or questions. I hope you will find it useful.
+
+PHPMailer
+
+In the following upgrades (#1 and #2), we will replace the standard and basic PHP mail() function by a complex email-sending library PHPMailer. 
+
+There is a PHPMailer package included in the download but I suggest that you download the actual release from its GitHub.
+
+Apart from including PHPMailer autoload file, we will need to make few changes to our configuration part of the PHP script. 
+
+PHP
+<?php
+/*
+THIS FILE USES PHPMAILER INSTEAD OF THE PHP MAIL() FUNCTION
+*/
+
+require 'PHPMailer-master/PHPMailerAutoload.php';
+
+/*
+*  CONFIGURE EVERYTHING HERE
+*/
+
+// an email address that will be in the From field of the email.
+$fromEmail = 'demo@domain.com';
+$fromName = 'Demo contact form';
+
+// an email address that will receive the email with the output of the form
+$sendToEmail = 'demo@domain.com';
+$sendToName = 'Demo contact form';
+
+// subject of the email
+$subject = 'New message from contact form';
+
+// form field names and their translations.
+// array variable name => Text to appear in the email
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
+
+// message that will be displayed when everything is OK :)
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+
+// If something goes wrong, we will display this message.
+$errorMessage = 'There was an error while submitting the form. Please try again later';
+You can notice that we had to replace $from and $sendTo variables by a pair of values $fromName and $fromEmail. The reason is that we will have to pass name and email separately to the PHPMailer.
+
+Now, we have everything ready for a first tweak of our form.
+
+Tweak #1 Sending HTML emails
+
+You can send HTML emails with the mail() function too but it is not ideal solution as you cannot easily create a plain-text part of the message. We are going to use the PHPMailer instead. 
+
+First, we will compose the HTML email body. Basically, it is done the same way as in the plain-text version. We only add few more tags like a heading, paragraph with a signature and we will output the form variables into a <table> element.
+
+PHP
+$emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
+$emailTextHtml .= "<table>";
+
+foreach ($_POST as $key => $value) {
+    // If the field exists in the $fields array, include it in the email
+    if (isset($fields[$key])) {
+        $emailTextHtml .= "<tr><th>$fields[$key]</th><td>$value</td></tr>";
+    }
+}
+$emailTextHtml .= "</table><hr>";
+$emailTextHtml .= "<p>Have a nice day,<br>Best,<br>Ondrej</p>";
+Then, we will create an instance of the PHPMailer class in a $mail variable. 
+
+We will set the from address for the email $mail->setFrom() and a recepient of the email by $mail->addAddress() too. 
+
+Both functions accept two parameters. First one is an email address (obligatory parameter) and the second one is a name of the sender/recepient (optional).
+
+PHP
+$mail = new PHPMailer;
+
+$mail->setFrom($fromEmail, $fromName);
+$mail->addAddress($sendToEmail, $sendToName); // you can add more addresses by simply adding another line with $mail->addAddress();
+$mail->addReplyTo($from);
+Then, we simply tell PHPMailer that we will be sending an HTML email by $mail->isHTML(true);. After that, we just need to pass the $emailText we have pregenerated to a $mail->msgHTML() function. This function will automatically create a plain-text version of the email too. Perfect, right?
+
+PHP
+$mail->isHTML(true);
+
+$mail->Subject = $subject;
+$mail->msgHTML($emailTextHtml); // this will also create a plain-text version of the HTML email, very handy
+Last step we need to do, is to simply call $mail->send(). We also monitor its output and when it returns FALSE (!$mail->send()), we throw an exception.
+
+PHP
+if(!$mail->send()) {
+    throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
+}
+This tweak is also included in the download package as contact-2.php.
+
+Tweak #2 Sending emails via SMTP
+
+I usually send emails from the same server but there can be situations when you would prefer the email to be sent from a different email server (your own email account, your another domain or your gmail). In this part, I will show you how to send it easily.
+
+We will be using PHPMailer again.
+
+First, we will add a new section to the configuration part of contact.php. There will be 3 new variables:
+
+$smtpHost (usually something line smtp.yourdomain.com; for gmail it is smtp.gmail.com) 
+$smtpUsername (usually your email) 
+$smtpPassword (usually your email password).
+PHP
+// smtp credentials and server
+
+$smtpHost = 'smtp.domain.com';
+$smtpUsername = 'hello@domain.com';
+$smtpPassword = 'PASSWORD';
+Then, we just need to initialize SMTP sending by this code snippet. Usually, this works nicely with a majority of web hosting providers. 
+
+PHP
+$mail = new PHPMailer;
+
+... - set from, recipient, message...
+
+$mail->isSMTP();
+
+//Enable SMTP debugging
+// 0 = off (for production use)
+// 1 = client messages
+// 2 = client and server messages
+$mail->SMTPDebug = 0;
+$mail->Debugoutput = 'html';
+
+//Set the hostname of the mail server
+// use
+// $mail->Host = gethostbyname('smtp.gmail.com');
+// if your network does not support SMTP over IPv6
+$mail->Host = gethostbyname($smtpHost);
+
+//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+$mail->Port = 587;
+
+//Set the encryption system to use - ssl (deprecated) or tls
+$mail->SMTPSecure = 'tls';
+
+//Whether to use SMTP authentication
+$mail->SMTPAuth = true;
+
+//Username to use for SMTP authentication - use full email address for gmail
+//We have configured this variable in the config section
+$mail->Username = $smtpHost;
+
+//Password to use for SMTP authentication
+//We have configured this variable in the config section
+$mail->Password = $smtpPassword;
+
+
+if(!$mail->send()) {
+    throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
+}
+Things can get a bit problematic with Gmail and its high security measures. The script should work fine with PHP 5.5+, with lower version you might not get it working at all.
+
+If you are having troubles with getting Gmail to work with PHPMailer, have a look at PHPMailer's troubleshooting guide or have a look at a complete example of their Gmail implementation. 
+
+This tweak is also included in the download package as contact-3.php.
+
+Tweak #3 A bunch of smaller tweaks, actually
+
+3.1. Adding more recepients
+
+If you are using mail() PHP function: Just duplicate the row with mail() function and add a new email address.
+
+PHP
+mail($sendTo, $subject, $emailText, implode("\n", $headers));
+mail('new@emailaddress.com', $subject, $emailText, implode("\n", $headers));
+If you are using PHPMailer: Call $mail->addToAdress() more times:
+
+PHP
+$mail->addAddress($sendToEmail, $sendToName);
+$mail->addAddress('newemail@domain.com', 'Johnny');
+3.2. Composing your own email message
+
+I am using the iteration through $_POST to compose the email message to simplify things a bit. But it is not a problem to compose your own message easily.
+
+Plain Text message
+
+Replace this code snippet 
+
+PHP
+$emailText = "You have a new message from your contact form\n=============================\n";
+
+foreach ($_POST as $key => $value) {
+    // If the field exists in the $fields array, include it in the email 
+    if (isset($fields[$key])) {
+        $emailText .= "$fields[$key]: $value\n";
+    }
+}
+By something similar to this:
+
+PHP
+$emailText = "You have a new message from your contact form\n
+=============================\n
+Some more text\n
+Name: $_POST[name]\n
+Message: $_POST[message]\n
+Add more form fields or custom text....";
+Note, that we are accessing the values directly in the $_POST array and also that you need to use \n for new lines.
+
+HTML Message
+
+If you are using the HTML message with the PHPMailer, the solution would be replacing this:
+
+PHP
+$emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
+$emailTextHtml .= "<table>";
+
+foreach ($_POST as $key => $value) {
+    // If the field exists in the $fields array, include it in the email
+    if (isset($fields[$key])) {
+        $emailTextHtml .= "<tr><th>$fields[$key]</th><td>$value</td></tr>";
+    }
+}
+$emailTextHtml .= "</table><hr>";
+$emailTextHtml .= "<p>Have a nice day,<br>Best,<br>Ondrej</p>";
+by something similar to this:
+
+PHP
+$emailTextHtml = "<style type='text/css'>body {font-family: Roboto, sans-serif; font-size: 13px; }</style>"
+$emailTextHtml .= "<body>";
+$emailTextHtml .= "<h1>You have a new message from your contact form</h1><hr>";
+$emailTextHtml .= "<table>";
+$emailTextHtml .= "<tr><th>Some custom message</th><td>$_POST[name]</td>";
+$emailTextHtml .= "<tr><th>Some custom stuff</th><td>$_POST[surname]</td>";
+$emailTextHtml .= "<tr><th>...</th><td>....</td>";
+$emailTextHtml .= "</table>";
+$emailTextHtml .= "<p>Have a nice day,<br>Best,<br>Ondrej</p>";
+$emailTextHtml .= "</body>";
+As you can see, I also added some basic styling to the <style> element. I will not go to the details too much though, as styling emails is a whole new chapter.
+
+3.3 Redirect user to a different page, do not use AJAX
+
+Maybe you will not need the AJAX form submit in the background but you would welcome a possibility to redirect the user to a different page. This is a often forgotten best practise, to redirect after the form is submitted.
+
+We all know annoying browser questions that you are about to send a form data again, etc., that happen if you do not redirect the user after submitting a form.
+
+Also like this, you eliminate the possibility to receive the form more than once. 
+
+The solution to this would be following:
+
+1. Remove following snippet from contact.js.
+
+JavaScript
+// when the form is submitted
+// delete ALL OF THESE
+$('#contact-form').on('submit', function (e) {
+     ....
+})
+2. Then, at the end of your contact.php, replace following snippet
+
+PHP
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+   ...
+}
+// else just display the message
+else {
+   ...
+}
+by something similar to:
+
+PHP
+if ($responseArray['message'] == 'success') {
+    // success redirect
+
+    header('Location: http://www.example.com/success.html');
+}
+else {
+    //error redirect
+    header('Location: http://www.example.com/error.html');
+}
+Wrapping Up #2
+
+This is really it. I hope you have learned something new today and this tutorial has helped you on your web design journey. 
+
+Thanks for reading.
+
+Note
+
+Development on your computer
+
+If you want to develop the form on your computer, you will need a local server with PHP support. One of the most common solutions is e.g. XAMPP (I use it myself), but there are many more.
+
+The localhost solution, be it XAMPP or similar, will most probably not have any working mail server included. To be able to debug/develop the emails, there are utilities, that simulate the mail server behaviour and instead of sending the email, they save the output/source code of the email to your hard drive. If you are using XAMPP, it comes with the utility called mailtodisk and emails will be saved in xamppfolder/mailoutput. One of the similar solutions can be e.g. MailCatcher, but I don't have any personal experience with it.
+
+To be able to send real email messages, you will need to put the script/page to the internet. To order great web hosting, have a look at iPage - one of the most reliable web hosts on the market. If you are new to them, to will also give you 80% off + many extras. If you're shopping around, put GoDaddy ($1/mo for new customers) or Fat Cow ($3/mo for new customers) on your comparison list too.
+
+Share this article with your friends
+
+Share on Facebook  Share on G+  Share on Twitter  Share on LinkedIn
+Hi, I'm Ondrej, creator of Bootstrapious. I have published Bootstrap tutorials and freebies here since 2015.
+
+Would you like to choose a topic for a next tutorial or a type of the next freebie? Do you need a consultation or would you like to get an exposure on the Bootstrapious website?
+
+Become one of Bootstrapious' patrons on Patreon and get one of the many great rewards I offer there.
+
+Thanks for stopping by and have a great day ;)
+
+Ondrej, Bootstrapious
+
+ 
+YOU MIGHT ALSO LIKE ONE OF OUR FREE THEMES
+Universal - Business & E-commerce Template
+UNIVERSAL - BUSINESS & E-COMMERCE TEMPLATE
+
+Universal is clean and stylish universal website template built with Bootstrap 3.3. It stands out…
+
+VIEW THEME
+
+Italiano - Restaurant or Café Template
+ITALIANO - RESTAURANT OR CAFÉ TEMPLATE
+
+Italiano is my free Bootstrap HTML responsive template. You can use it to build an elegant website…
+
+VIEW THEME
+
+Under construction template
+UNDER CONSTRUCTION TEMPLATE
+
+Under construction is a clean and simple free Bootstrap template. You can have it uploaded as…
+
+VIEW THEME
+
+COMMENTS
+Comments automatically close after 120 days.
+
+Although I would like to help everyone getting their websites running, I simply can't as my time is really limited.
+
+If you need a consultation or support, I provide a dedicated consulting to Bootstrapious Patrons - just choose a Dedicated support reward on my Patreon page and get in touch. Thank you for understanding and supporting Bootstrapious.
+
+
+ Divi WordPress Theme
+ 
+BLOG
+BOOTSTRAPIOUS
+BOOTSTRAP
+TUTORIALS
+PSD
+LATEST POSTS
+ Bootstrap Navbar
+BOOTSTRAP NAVBAR
+
+ Bootstrap Sidebar
+BOOTSTRAP SIDEBAR
+
+TRENDING THEMES
+ Hub - Bootstrap 4 E-Commerce Template
+HUB - BOOTSTRAP 4 E-COMMERCE TEMPLATE
+
+ Bootstrap Blog
+BOOTSTRAP BLOG
+
+ 
+TEMPLATE CATEGORIES
+
+Portfolio themes
+Multipurpose templates
+E-commerce templates
+Landing pages
+Admin Templates
+Coming Soon Themes
+Classifieds Themes
+Restaurant Templates
+Blog Templates
+NAVIGATE
+
+About
+Advertise
+Contact
+ABOUT BOOTSTRAPIOUS
+
+You will find here a great collection of exclusive Bootstrap templates and themes ready to be used in your next project. All templates are fully responsive, HTML valid, premium quality and last but not least - a majority of them is free to use!
+
+To boost your coding skills, have a look at my collection of Bootstrap tutorials.
+
+JOIN MY NEWSLETTER
+
+I will let you know about new templates coming, updates and share useful web design stuff. I won't share your email with anyone else.
+
+
+Your email
+
+FOLLOW | GET IN TOUCH
+
+    
+ABOUT BOOTSTRAP FRAMEWORK
+
+Bootstrap is the most popular HTML and CSS framework for developing responsive websites. Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.
+
+Find out more about Bootstrap on its official website.
+
+© 2015 - 2017. Bootstrapious is a project by Ondrej Svestka and Kakusei.cz.
