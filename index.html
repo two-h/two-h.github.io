@@ -90,8 +90,14 @@
    .bg-2 {
        background-color: #DFD9BF;
        padding: 3px;
+   }
+
+  .bg-3 {
+        padding: 32px;
+        color: #2d2d30;
 
    }
+
    .bg-1 h3 {color: #fff;}
    /*.bg-1 p {font-style: italic;}*/
 
@@ -179,15 +185,11 @@
        background-color: red !important;
    }
    footer {
-       background-color: #2d2d30;
-       color: #f5f5f5;
+       background-color: #29292c;
        padding: 32px;
    }
-   footer a {
-       color: #f5f5f5;
-   }
    footer a:hover {
-       color: #777;
+      background-color: #29292c;
        text-decoration: none;
    }  
    .form-control {
@@ -908,20 +910,11 @@
           </div>
         </div>
       </div>
-<!--       <script src="https://code.jquery.com/jquery-1.12.0.min.js">
-      </script> 
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-      </script>  -->
       <script src="validator.js">
       </script> 
       <script src="contact.js">
       </script> <!-- Add Google Maps -->
       <div id="googleMap"></div>
-      <br>
-      <br>
-      <br>      
-      <br>
-      <br>
     </div>
     <script>
     function myMap() {
@@ -982,11 +975,35 @@
     }
     </script> 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9jN_l-B2TyndMjCu7a7uPue6DH3F6xg&callback=myMap">
-    </script> <!-- Footer -->
-    <footer class="text-center">
-      <a class="up-arrow" data-toggle="tooltip" href="#myPage" title="TO TOP"><span class="glyphicon glyphicon-chevron-up"></span></a><br>
-      <br>
-    </footer>
+    </script> 
+
+
+    <div class="text-center container-fluid bg-1"> <!-- Footer -->
+
+         <div style="padding:32px" class="col-md-4 bg-1">
+            <div class="row bg-1 ">
+            <a style="color:#806600" href=href="/TermsAndConditions.pdf"> <i class="fa fa-file-pdf-o fa-2x"></i> Our Terms</a>
+             <p>Have a read through our T&C's, they're not that boring.</p>
+            </div>
+         </div>
+
+          <div style="padding:32px" class="col-md-4 bg-1">
+                <div class="row bg-1">
+                <a style="color:#806600" href="#myPage"> <i class="fa fa-chevron-up fa-2x"> </i> </a>
+                <p> To the top <p/>
+                </div> 
+         </div>
+
+         <div style="padding:32px" class="col-md-4 bg-1">
+                <div class="row bg-1">
+               <i style="color:#806600" class="fa fa-address-card-o fa-2x"> </i> 
+                 <p>inquiries@twohcoffee.co.uk<p/>
+                 <p> PHONE NUMBER HERE</p>
+                </div> 
+         </div>
+
+    </div>
+
     <script>
 
 
