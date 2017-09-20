@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Two H | Coffee Roasters</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+  <script src="//use.typekit.net/kei2cfp.js" type="text/javascript">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/css/swiper.min.css">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <link href='custom.css' rel='stylesheet' type='text/css'>
+  <style>
+   .slideanim {visibility:hidden;}
+   .slide {
+       animation-name: slide;
+       -webkit-animation-name: slide;
+       animation-duration: 1s;
+       -webkit-animation-duration: 1s;
+       visibility: visible;
+   }
+   @keyframes slide {
+     0% {
+       opacity: 0;
+       transform: translateY(70%);
+     } 
+     100% {
+       opacity: 1;
+       transform: translateY(0%);
+     }
+   }
+   @-webkit-keyframes slide {
+     0% {
+       opacity: 0;
+       -webkit-transform: translateY(70%);
+     } 
+     100% {
+       opacity: 1;
+       -webkit-transform: translateY(0%);
+     }
+   }
+   body {
+       font: 400 15px/1.8 PlayfairDisplay, serif;
+       color: #777;
+   }
+   h3, h4 {
+       margin: 10px 0 30px 0;
+       letter-spacing: 3px;      
+       font-size: 20px;
+       color: #111;
+   }
+
+  h6{
+   font-style:italic;
+   color:#afafaf; 
+
+
+  }
+
+  html,body{height:100%;}
+  .carousel,.item,.active{height:100%;}
+  .carousel-inner{height:100%;}
+   
+   .container {
+       padding: 30px 20px;
+   }
+   .person {
+       border: 5px solid transparent;
+       margin-bottom: 25px;
+       width: 50%;
+       height: 50%;
+       opacity: 0.7;
+   }
+   .person:hover {
+       border-color: #806600;
+   }
+
+   .bg-1 {
+       background: #2d2d30;
+       color: #bdbdbd;
+   }
+
+   .bg-2 {
+       background-color: #DFD9BF;
+       padding: 3px;
+   }
+
+  .bg-3 {
+        padding: 32px;
+        color: #2d2d30;
+
+   }
+
+   .bg-1 h3 {color: #fff;}
+   /*.bg-1 p {font-style: italic;}*/
+
+
+   .list-group-item:first-child {
+       border-top-right-radius: 0;
+       border-top-left-radius: 0;
+   }
+   .list-group-item:last-child {
+       border-bottom-right-radius: 0;
+       border-bottom-left-radius: 0;
+   }
+   .thumbnail {
+       padding: 0 0 15px 0;
+       border: none;
+       border-radius: 0;
+   }
+   .thumbnail p {
+       margin-top: 15px;
+       color: #555;
+   }
+   .btn {
+       padding: 10px 20px;
+       background-color: #806600; /*send button on contact form */
+       color: #f1f1f1;
+       border-radius: 0;
+       transition: .2s;
+   }
+   .btn:hover, .btn:focus {
+       border: 1px solid #333;
+       background-color: #fff;
+       color: #000;
+   }
+   .modal-header, h4, .close {
+       background-color: #333;
+       color: #fff !important;
+       text-align: center;
+       font-size: 30px;
+   }
+   .modal-header, .modal-body {
+       padding: 40px 50px;
+   }
+   .nav-tabs li a {
+       color:#777; /*text of tab colour when not active*/ 
+   }
+
+   #googleMap {
+       width: 100%;
+       height: 400px;
+       -webkit-filter: grayscale(75%);
+       filter: grayscale(75%);
+   }  
+   .navbar {
+       font-family: Montserrat, sans-serif;
+       margin-bottom: 0;
+       background-color: #2d2d30; /*NAV BAR colour */
+       border: 0;
+       font-size: 11px !important;
+       letter-spacing: 4px;
+       opacity: 0.9;
+   }
+   .navbar li a, .navbar .navbar-brand { 
+       color: #d5d5d5 !important;  /*nav bar text colour */
+   }
+
+   .navbar-nav li a:hover {
+       color: #806600 !important; /*nav bar text hover colour */
+   }
+
+   .navbar-nav li.active a {
+       color: #fff !important;
+       background-color: #806600 !important; /*#29292c */
+   }
+   .navbar-default .navbar-toggle {
+       border-color: transparent;
+   }
+   .open .dropdown-toggle {
+       color: #fff;
+       background-color: #555 !important;
+   }
+   .dropdown-menu li a {
+       color: #000 !important;/*#000*/
+   }
+   .dropdown-menu li a:hover {
+       background-color: red !important;
+   }
+   footer {
+       background-color: #29292c;
+       padding: 32px;
+   }
+   footer a:hover {
+      background-color: #29292c;
+       text-decoration: none;
+   }  
+   .form-control {
+       border-radius: 0;
+   }
+   textarea {
+       resize: none;
+   }
+
+  /*FUCKING PILLS */
+  .nav-pills>li.active>a, 
+  .nav-pills>li.active>a:focus, 
+  .nav-pills>li.active>a:hover {
+     background-color: #AF9F5E ; /*#689389 ;*/ 
+  }
+  .nav-pills a {
+  color: #2d2d30;
+  }
+
+  /*panel shit */
+  .panel {
+     border: 2px solid #806600; 
+     border-radius:0;
+     transition: box-shadow 0.5s;
+  }
+
+  .panel:hover {
+     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+
+  .panel-footer .btn:hover {
+     border: 1px solid #2d2d30 ; /*#8BC4B6;*/
+     background-color: #fff !important;
+     color: #f4511e;
+  }
+
+  .panel-heading {
+     color: #fff !important;
+     background-color: #2d2d30 !important;
+     padding: 15px;
+     border-bottom: 1px solid transparent;
+     border-top-left-radius: 0px;
+     border-top-right-radius: 0px;
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+  }
+
+  .panel-footer {
+     background-color: #EFECDF !important; /* #D4E9E4 !important;*/
+     color: #2d2d30 ; /*delete this; #B68BC4 decaf | #BF7777 limited*/ 
+  }
+  .panel-footer h3 {
+     font-size: 32px;
+  }
+  .panel-footer h4 {
+     color: #aaa;
+     font-size: 14px;
+  }
+  .panel-footer .btn {
+     margin: 15px 0;
+     background-color: #f4511e;
+     color: #fff;
+  }
+
+  /********************************/
+  /*       Fade Bs-carousel       */
+  /********************************/
+  .fade-carousel {
+     position: relative;
+     height: 100vh;
+  }
+  .fade-carousel .carousel-inner .item {
+     height: 100vh;
+  }
+  .fade-carousel .carousel-indicators > li {
+     margin: 0 2px;
+     background-color: #f39c12;
+     border-color: #f39c12;
+     opacity: .7;
+  }
+  .fade-carousel .carousel-indicators > li.active {
+   width: 10px;
+   height: 10px;
+   opacity: 1;
+  }
+
+  .fade-carousel .carousel-inner .item .hero {
+     opacity: 0;
+     -webkit-transition: 1s all ease-in-out .1s;
+        -moz-transition: 1s all ease-in-out .1s; 
+         -ms-transition: 1s all ease-in-out .1s; 
+          -o-transition: 1s all ease-in-out .1s; 
+             transition: 1s all ease-in-out .1s; 
+  }
+  .fade-carousel .carousel-inner .item.active .hero {
+     opacity: 1;
+     -webkit-transition: 1.25s all ease-in-out .1s;
+        -moz-transition: 1.25s all ease-in-out .1s; 
+         -ms-transition: 1.25s all ease-in-out .1s; 
+          -o-transition: 1.25s all ease-in-out .1s; 
+             transition: 1.25s all ease-in-out .1s;    
+  }
+
+  /********************************/
+  /*            Overlay           */
+  /********************************/
+  .overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index: 2;
+     background-color: #080d15;
+     opacity: 0;
+  }
+
+  /********************************/
+  /*          Custom Buttons      */
+  /********************************/
+  .btn.btn-lg {padding: 10px 40px;}
+  .btn.btn-hero,
+  .btn.btn-hero:hover,
+  .btn.btn-hero:focus {
+     color: #f5f5f5;
+     background-color: #1abc9c;
+     border-color: #1abc9c;
+     outline: none;
+     margin: 20px auto;
+  }
+  /********************************/
+  /*       Slides backgrounds     */
+  /********************************/
+  .fade-carousel .slides .slide-1, 
+  .fade-carousel .slides .slide-2,
+  .fade-carousel .slides .slide-3, 
+  .fade-carousel .slides .slide-4, 
+  .fade-carousel .slides .slide-5, 
+  .fade-carousel .slides .slide-6, 
+  .fade-carousel .slides .slide-7{
+   height: 100vh;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+  }
+  .fade-carousel .slides .slide-1 {
+   background-image: url("/Images/picb.jpg"); 
+  }
+  .fade-carousel .slides .slide-2 {
+   background-image: url("/Images/picf.jpg");
+  }
+  .fade-carousel .slides .slide-3 {
+   background-image: url("/Images/pice.jpg");
+  }
+  .fade-carousel .slides .slide-4 {
+   background-image: url("/Images/pica.jpg");
+  }
+  .fade-carousel .slides .slide-5 {
+   background-image: url("/Images/picc.jpg");
+  }
+  .fade-carousel .slides .slide-6 {
+   background-image: url("/Images/picd.jpg");
+  }
+  .fade-carousel .slides .slide-7 {
+   background-image: url("/Images/picg.jpg");
+  }
+
+  /********************************/
+  /*          Media Queries       */
+  /********************************/
+  @media screen and (min-width: 980px){
+     .hero { width: 980px; }    
+  }
+  @media screen and (max-width: 640px){
+     .hero h1 { font-size: 4em; }    
+  }
+
+  </style>
+</head>
+<body data-offset="50" data-spy="scroll" data-target=".navbar" id="myPage" style="max-width:2000px">
+
+<div class="bg-1" id="ourBuisness">
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center">OUR BUSINESS</h3>
+    <p class="text-center"><em>We got you covered!</em></p>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" href="#home">WholeSale</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#menu1">Retail</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#menu2">Collaborations</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+          <br>
+          <h3>Consistent and quality coffee that your shop can depend on</h3>
+          <p>Supplying coffee wholesale for cafés, bars and restaurants is our core business, and it is one we know well. The owners of Two H both started their
+          coffee journeys as baristas and running speciality coffee shops, and we have 10 years of combined experience in the trade. During this time we have learnt
+          a few things that have helped shaped our ethos and shaped our attitude towards coffee and the way we like to do business.</p>
+          <p>As a result, we believe great coffee should speak for itself and be accessible to everyone. This is why we are transparent and upfront with our pricing
+          for everyone to see and with no hidden costs. We believe our volume pricing model is unique in the coffee world, making sure that our coffee's are
+          available to all customers - big or small - at fair and competitive price. It also enables us to offer savings to our customers on larger orders, which
+          was something that we never came across when we were buying roasted coffee.</p>
+          <p>We also believe that successful business is built on great relationships and working together with our customers. That is why we would love to invite
+          you along to our roastery, where you are able to bring your staff and get hands on with the roasting process. This enables you to take the knowledge and
+          enthusiasm that we share, back to your workplace which you can then pass onto your customers.</p>
+          <p>These values and attention to detail are at the very heart of what we do. We can offer the best service to our customers, not just by providing
+          delicious and great value coffee, but also by building long-lasting relationships together - which is ultimately the key to our joint success.</p>
+        </div>
+        <div class="tab-pane fade" id="menu1">
+          <br>
+          <h3>Something special for the home</h3>
+          <p>We know how important that morning brew is (well every brew) so all our coffee is available in smaller bags for kitchen cupboards up and down the
+          country.</p>
+          <p>We know that everyone has their favourite type of coffee, but also understand that every now and then you want to try something new. This is why, in
+          addition to our espresso coffees, we offer our limited edition range – coffees that we really feel the need to share with you, and these will continuously
+          change as we discover beans worth sharing. However, they will always be premium coffees with a truly distinguished personality and flavour profile. This
+          gives the home enthusiast the opportunity to experience single origin beans from all over the world and taste the differences between countries, regions,
+          varietals & processes.</p>
+        </div>
+        <div class="tab-pane fade" id="menu2">
+          <br>
+          <h3>Truly unique coffee and branding to make your business stand out</h3>
+          <p>Although it is true to say all our customers are fellow collaborators, sometimes we are approached with unique and exciting ideas that need a personal
+          touch. We work together with our clients to create unique coffee blends and branding to create a completely tailor made product and premium service.</p>
+          <p>To give an example; we have created special complimentary blends for a coffee & cocktail bar. One blend for the day when serving coffees, the other for
+          use at night whilst serving coffee themed cocktails. Along side this we designed bespoke packaging for each blend to match the day and night theme. This
+          joint project really added value to their brand, and they have subsequently received great feedback.</p>
+          <p>We found this project incredibly enjoyable and satisfying, and we believe our willingness to engage with client ideas, and work to bring them to life,
+          are amongst some of the things that make us unique as a company.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
